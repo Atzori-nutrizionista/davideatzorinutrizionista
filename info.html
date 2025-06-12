@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - La Mia Homepage</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="css/info.css">
+    <link href="https://cdn.jsdelivr.net/npm/lucide-static@0.258.0/font/lucide.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <img src="img/logoAD.svg" alt="Logo Icon" class="header-icon"> 
+                <div class="header-text">
+                    <h1>Dott. Davide Atzori</h1>
+                    <p class="subtitle">Biologo Nutrizionista</p>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <span class="hamburger" onclick="toggleMenu()">☰</span>
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li>|</li>
+                    <li><a href="about.html">Chi sono</a></li>
+                    <li>|</li>
+                    <li><a href="percorso-nutrizionale.html">Il percorso nutrizionale</a></li>
+                    <li>|</li>
+                    <li><a href="info.html">Servizi offerti</a></li>
+                    <li>|</li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li>|</li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Testo a sinistra -->
+        <div class="formazione-header">
+            <h2>I miei servizi</h2>
+        </div>
+        <section id="servizi">
+            <div class="servizi-content">
+        
+                <div class="servizio">
+                    <div class="servizio-image">
+                        <img src="img/servizi/nutrition.png" alt="Alimentazione vegetariana/vegana">
+                    </div>
+                    <h3>Nutrizione sportiva</h3>
+                        <!-- Hidden text -->
+                    <div class="hidden-text" style="display: none;">
+                    <p>La nutrizione è parte integrante di uno sport, deve essere un supporto in grado di migliorare le prestazioni di un atleta, oltre che scongiurare la presenza di carenze sia a livello di macro che di micronutrienti.</p>
+                    </div>
+
+                    <!-- Button to toggle text -->
+                    <button class="start-button" onclick="toggleText(this)">Scopri di più</button>
+                </div>
+            
+        
+                <div class="servizio">
+                    <div class="servizio-image">
+                        <img src="img/servizi/digestive-organ.png" alt="Rieducazione alimentare">
+                    </div>
+                    <h3>Nutrizione e IBS</h3>
+                    <!-- Hidden text -->
+                    <div class="hidden-text" style="display: none;">
+                        <p>L’IBS è una sindrome in ascesa negli ultimi anni, soprattutto tra i più giovani. I fattori scatenanti non sempre sono legati all’alimentazione, per questo è fondamentale lavorare su più aspetti.</p>
+                        </div>
+    
+                        <!-- Button to toggle text -->
+                    <button class="start-button" onclick="toggleText(this)">Scopri di più</button>
+                </div>
+        
+                <div class="servizio">
+                    <div class="servizio-image">
+                        <img src="img/servizi/stethoscope.png" alt="Nutrizione sportiva">
+                    </div>
+                    <h3>Nutrizione clinica</h3>
+                    <!-- Hidden text -->
+                    <div class="hidden-text" style="display: none;">
+                        <p>la nutrizione clinica è una branca della nutrizione che offre soluzioni efficaci e mirate per correggere alcuni difetti metabolici dell’organismo.</p>
+                        </div>
+    
+                        <!-- Button to toggle text -->
+                    <button class="start-button" onclick="toggleText(this)">Scopri di più</button>
+                </div>
+        
+                <div class="servizio">
+                    <div class="servizio-image">
+                        <img src="img/servizi/allergies.png" alt="Dimagrimento">
+                    </div>
+                    <h3>Dieta in presenza di <br>allergie  e/o intolleranze</h3>
+                    <!-- Hidden text -->
+                    <div class="hidden-text" style="display: none;">
+                        <p>Esistono svariati tipi di allergie o intolleranze legate alla sfera dell’alimentazione. La gestione di queste patologie deve essere curata al dettaglio, con diete specifiche a seconda della diversa tipologia di intolleranza o allergia.</p>
+                        </div>
+    
+                        <!-- Button to toggle text -->
+                    <button class="start-button" onclick="toggleText(this)">Scopri di più</button>
+                </div>
+        
+                <div class="servizio">
+                    <div class="servizio-image">
+                        <img src="img/servizi/plant-based.png" alt="Nutrizione in gravidanza">
+                    </div>
+                    <h3>Diete <br> vegetariane e vegane</h3>
+                    <!-- Hidden text -->
+                    <div class="hidden-text" style="display: none;">
+                        <p>Le diete vegetariane e vegane sono in ascesa negli ultimi tempi. Esistono differenti declinazioni di questi stili alimentari, un esempio è la dieta latto-ovo-vegetariana, che esclude solo gli alimenti derivanti dalla carne, ma include alimenti di origine animale come latte e uova. Mentre la dieta vegana esclude totalmente gli alimenti di origine animale. Le diete basate su questi stili alimentari devono fare in modo che il paziente non vada incontro a carenze di vario tipo.</p>
+                        </div>
+    
+                        <!-- Button to toggle text -->
+                    <button class="start-button" onclick="toggleText(this)">Scopri di più</button>
+                </div>
+        
+                <div class="servizio">
+                    <div class="servizio-image">
+                        <img src="img/servizi/pregnant.png" alt="Educazione alimentare per bambini">
+                    </div>
+                    <h3>Nutrizione in gravidanza</h3>
+                    <!-- Hidden text -->
+                    <div class="hidden-text" style="display: none;">
+                        <p>La gravidanza prevede una dieta in cui i livelli di alcuni nutrienti debbano essere aumentati o diminuiti specificatamente, per venire incontro alle esigenze della gestante e del feto.</p>
+                        </div>
+    
+                        <!-- Button to toggle text -->
+                    <button class="start-button" onclick="toggleText(this)">Scopri di più</button>
+                </div>
+        
+                <div class="servizio">
+                    <div class="servizio-image">
+                        <img src="img/servizi/pyramid.png" alt="Check-up nutrizionale">
+                    </div>
+                    <h3>Rieducazione alimentare</h3>
+                    <!-- Hidden text -->
+                    <div class="hidden-text" style="display: none;">
+                        <p>Ti insegnerò ad utilizzare correttamente gli strumenti di una dieta, ovvero gli alimenti. Quest’ultimi sono come i mattoni di una casa, infatti andranno a formare/comporre il tuo stile alimentare.</p>
+                        </div>
+    
+                        <!-- Button to toggle text -->
+                    <button class="start-button" onclick="toggleText(this)">Scopri di più</button>
+                </div>
+        
+                <div class="servizio">
+                    <div class="servizio-image">
+                        <img src="img/servizi/diet.png" alt="Consulenze online">
+                    </div>
+                    <h3>Gestione del peso</h3>
+                    <!-- Hidden text -->
+                    <div class="hidden-text" style="display: none;">
+                        <p>Le oscillazioni del peso non sono mai una cosa buona per il nostro corpo, per questo mi impegno a stabilire un obbiettivo insieme e a mantenerlo nel tempo.</p>
+                        </div>
+    
+                        <!-- Button to toggle text -->
+                    <button class="start-button" onclick="toggleText(this)">Scopri di più</button>
+                </div>
+        
+            </div>
+    
+        
+
+        <section id="contacts">
+            <div class="contacts-wrapper">
+          
+              <!-- Mappa -->
+              <div class="map-box">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.320558095234!2d8.944147915673293!3d44.40565017910243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d3416b7bcf7a1b%3A0x84a2f7761e9bfc1!2sVia%20XX%20Settembre%2C%208%2F21%2C%2016121%20Genova%20GE%2C%20Italia!5e0!3m2!1sit!2sit!4v1631032977285!5m2!1sit!2sit"
+                    style="width: 100%; height: 100%; display: block; border: 0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+              </div>
+          
+              <!-- Form -->
+              <div class="form-box">
+                <h2>Contattami</h2>
+                <p>Hai domande o vuoi prenotare una consulenza? Scrivimi!</p>
+                <form onsubmit="return inviaEmail();">
+                  <input type="text" id="nome" placeholder="Il tuo nome" required>
+                  <input type="email" id="email" placeholder="La tua email" required>
+                  <textarea id="messaggio" rows="5" placeholder="Il tuo messaggio" required></textarea>
+                  <button type="submit">Invia messaggio</button>
+                </form>
+              </div>
+          
+            </div>
+          </section>
+          
+    </main>
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>|</li>
+                <li><a href="about.html">Chi sono</a></li>
+                <li>|</li>
+                <li><a href="percorso-nutrizionale.html">Il percorso nutrizionale</a></li>
+                <li>|</li>
+                <li><a href="info.html">Servizi offerti</a></li>
+                <li>|</li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li>|</li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>         
+            <p class="footer-small">Biologo nutrizionista Davide Atzori © Tutti i diritti riservati | Igea Equipe Salute, Via Interiano 3/9b, Genova, Italia | Via Zara 19/4, Genova, Italia | Part.IVA: ######</p>
+            <ul class="footer-menu footer-menu-inline">
+                <li><a href="terminiecondizioni.html">Termini & Condizioni</a></li>
+                <li>|</li>
+                <li><a href="crediti.html">Crediti</a></li>
+            </ul> 
+        </div>
+    </footer>
+    <!-- Fullscreen menu for mobile view -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <button class="close-btn" onclick="toggleMenu()">✕</button>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="about.html" onclick="toggleMenu()">Chi sono</a>
+        <a href="percorso-nutrizionale.html" onclick="toggleMenu()">Il percorso nutrizionale</a>
+        <a href="info.html" onclick="toggleMenu()">Servizi offerti</a>
+        <a href="FAQ.html" onclick="toggleMenu()">FAQ</a>
+        <a href="contatti.html" onclick="toggleMenu()">Contatti</a>
+    </div>
+    <script>
+        function inviaEmail() {
+          const nome = document.getElementById('nome').value;
+          const email = document.getElementById('email').value;
+          const messaggio = document.getElementById('messaggio').value;
+        
+          const destinatario = "tuamail@example.com"; // Cambia con la tua email
+          const oggetto = encodeURIComponent("Contatto dal sito web");
+          const corpo = encodeURIComponent(
+            `Nome: ${nome}\nEmail: ${email}\n\nMessaggio:\n${messaggio}`
+          );
+        
+          window.location.href = `mailto:${destinatario}?subject=${oggetto}&body=${corpo}`;
+          return false;
+        }
+    </script>
+    <script>
+        function toggleText(button) {
+            const hiddenText = button.previousElementSibling;
+            if (hiddenText.style.display === "none") {
+                hiddenText.style.display = "block";
+                button.textContent = "Nascondi";
+            } else {
+                hiddenText.style.display = "none";
+                button.textContent = "Scopri di più";
+            }
+        }
+    </script>
+    <script>
+        // Toggle fullscreen menu display
+        function toggleMenu() {
+            const menu = document.getElementById('fullscreenMenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Disattiva l'osservazione se serve una sola animazione
+                observer.unobserve(entry.target);
+              }
+            });
+          }, {
+            threshold: 0.2 // trigger quando il 20% è visibile
+          });
+      
+          const servizi = document.querySelectorAll('.servizio');
+          servizi.forEach(servizio => observer.observe(servizio));
+        });
+      </script>
+      
+</body>
+</html>
