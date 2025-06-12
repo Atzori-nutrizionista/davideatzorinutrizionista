@@ -1,0 +1,611 @@
+/* Reset some default margins and styles */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+/* Background for the entire page with a shadow overlay */
+body {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0); /* trigger GPU rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+                url('../img/home.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+
+}
+
+
+/* Header section with percentage-based dimensions */
+header {
+    position: relative;
+    width: 100%;
+    height: 10vh; /* Adjusted height for better spacing */
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 189, 89, 0.6); /* Less transparent */
+    display: flex;
+    align-items: center;
+}
+
+/* Styling the header content */
+.header-content {
+    width: 90%; /* Responsive width to fit different screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 0; /* Reduced padding for more compact layout */
+}
+
+/* Icon styling with responsive dimensions and left padding */
+.header-icon {
+    width: clamp(10px, 10vw, 60px); /* Icon scales between 10px and 50px */
+    max-width: 60px; /* Limit maximum width on large screens */
+    position: absolute; /* Position the icon absolutely within its container */
+    left: 15px; /* Add padding from the left edge */
+    top: 50%; /* Center vertically within the header */
+    transform: translateY(-50%); /* Adjust to center vertically based on its height */
+    padding-right: 0.5%;
+}
+
+/* Specific styling for landscape orientation on small screens */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .header-icon {
+        width: 25px; /* Set a fixed width for landscape orientation */
+    }
+}
+
+/* Header text wrapper for h1 and subtitle */
+.header-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: calc(5px + 70px); /* Offset to the right of the icon, adjusting as needed */
+    transform: translateY(-50%); /* Adjust to center vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left within the container */
+}
+
+/* Scalable title */
+header h1 {
+    margin: 0;
+    font-size: clamp(0.5rem, 2vw, 1.3rem); /* Scales between 0.8rem and 2rem */
+    color: rgb(254, 255, 251);
+}
+
+/* Subtitle styling with scalable font */
+header .subtitle {
+    margin: 5px 0 0 0;
+    font-size: clamp(0.4rem, 1.2vw, 0.9rem); /* Scales between 0.4rem and 1.2rem */
+    font-style: italic;
+    color: white;
+}
+
+/* Landscape orientation adjustments for small screens */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .header-text {
+        left: calc(10px + 40px); /* Reduce the space in landscape orientation */
+    }
+}
+/* Navigation bar styling */
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar li {
+    color: white;
+}
+
+.nav-bar a {
+    color: rgb(254, 255, 251);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-bar a:hover {
+    color: #afd0af; /* Change to a gold color on hover */
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+    color: rgb(254, 255, 251);
+}
+
+/* Fullscreen menu styling for mobile */
+.fullscreen-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 189, 89, 0.9); /* Less transparent */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+}
+
+.fullscreen-menu a {
+    color: rgb(254, 255, 251);
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: rgb(254, 255, 251);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .nav-bar ul {
+        display: none; /* Hide the menu links on small screens */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu icon on small screens */
+    }
+}
+
+/* Main content styling */
+main {
+    padding: 0; /* Remove padding from main */
+    margin: 0; /* Remove any default margin that might create space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Team section styling */
+#team-section {
+    padding: 5vh 3vw; /* Responsive padding */
+    text-align: center;
+    color: white;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Responsive heading */
+#team-section h2 {
+    font-size: clamp(1.5rem, 2.5vw, 4.5rem);
+    color: white;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#team-section p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem); /* Smaller text on mobile */
+}
+
+/* Additional media queries for larger screens */
+@media (min-width: 1024px) {
+    #team-section {
+        padding: 6vh 5vw; /* More padding on large screens */
+        max-width: 70%; /* Reduce width to prevent stretching */
+    }
+}
+
+@media (max-width: 600px) {
+    #team-section {
+        width: 95%; /* Near full width on smaller screens */
+    }
+
+    #team-section h2 {
+        font-size: clamp(1.2rem, 4vw, 1.8rem); /* Smaller heading on mobile */
+    }
+
+    #team-section p {
+        font-size: clamp(0.9rem, 3vw, 1.1rem); /* Smaller text on mobile */
+    }
+}
+
+
+  .contatti {
+    width: 100%;  /* Usa tutta la larghezza disponibile */
+    background-color: white;
+    padding: 30px 0;
+  }
+  
+  .contatti-contenitore {
+    display: flex;
+    align-items: flex-start;  /* Allineamento verso l'alto */
+    width: 100%;  /* Usa tutta la larghezza disponibile */
+  }
+  
+  .testo {
+    margin-left: 5%;
+    margin-right: 40px; /* Spazio tra il testo e il separatore */
+  }
+  
+  .separatore {
+    width: 1px;
+    height: 200px;
+    background-color: #ccc;
+    margin-right: 20px; /* Spazio tra il separatore e la lista dei contatti */
+  }
+  .lista-contatti {
+    margin-left: 20px; /* Spazio tra il separatore e la lista dei contatti */
+  }
+  
+  .lista-contatti ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .lista-contatti li {
+    display: flex; /* Allinea icona e testo sulla stessa riga */
+    align-items: center; /* Allinea verticalmente al centro */
+    margin: 30px 0; /* Aumentato il margine verticale per distanziare gli elementi */
+  }
+  
+  .lista-contatti strong {
+    font-weight: bold;
+  }
+  
+  /* Icone SVG Lucide */
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; /* Spazio tra l'icona e il testo */
+  }
+    
+/* Media Query per schermi fino a 800px */
+@media (max-width: 800px) {
+    .contatti-contenitore {
+      flex-direction: column; /* Cambia la direzione in colonna per i dispositivi piccoli */
+      padding-left: 10px; /* Aggiunge padding a sinistra */
+      padding-right: 10px; /* Aggiunge padding a destra */
+    }
+
+    .testo {
+      width: 100%; /* Imposta la larghezza a 100% per usare tutta la larghezza disponibile */
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center; /* Centra il testo */
+      margin-bottom: 20px; /* Aggiunge spazio sotto il testo */
+      font-size: 15px; /* Diminuisce la dimensione del font */
+    }
+
+    .separatore {
+      align-self: center;
+      width: 70%;  /* Rende il separatore largo quanto il contenitore */
+      height: 1px;  /* Modifica l'altezza per adattarsi meglio al layout verticale */
+      margin-bottom: 20px; /* Aggiungi spazio sotto il separatore */
+      background-color: #ccc; /* Aggiungi colore al separatore se necessario */
+    }
+
+    .lista-contatti {
+      margin-top: 10px; /* Aggiunge spazio tra separatore e lista */
+      width: 80%;  /* Assicura che la lista occupi tutta la larghezza disponibile */
+      text-align: left; /* Allinea il contenuto della lista a sinistra */
+      display: flex;
+      flex-direction: column; /* Imposta la lista in verticale */
+      align-items: flex-start; /* Allinea gli elementi sulla sinistra */
+      padding-left: 0;
+    }
+
+    .lista-contatti li {
+      margin:  0 30px; /* Aumenta il margine verticale tra gli item */
+      padding: 10px 0; /* Aggiungi padding verticale per maggiore spazio */
+      display: flex; /* Allinea l'icona e il testo sulla stessa riga */
+      align-items: center; /* Centra verticalmente icona e testo */
+      justify-content: flex-start; /* Allinea a sinistra */
+    }
+
+    .lista-contatti a {
+      width: 80%;
+      font-size: 12px; /* Diminuisce la dimensione del font dei link */
+    }
+
+    /* Diminuisce la dimensione delle icone */
+    .icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px; /* Aggiungi spazio tra l'icona e il testo */
+      margin-left: 0%;
+    }
+}
+
+
+  
+
+.in-icon {
+    width: 30px; /* Set the icon size */
+    height: 30px; /* Set the icon size */
+    display: block; /* Make sure it behaves as a block-level element */
+    margin: 0 auto; /* Center horizontally */
+}
+
+
+
+/* Contact Information Section Styling */
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    width: 100%;
+    gap: 30px;
+}
+
+#contact-info{
+    background-color: white;
+}
+
+
+
+.link
+{
+    text-decoration: none;
+    color: #333;
+}
+
+.link:hover{
+    color: #f0896a;
+    text-decoration: underline;
+}
+
+  
+  .contact-info {
+    color: #333;
+  }
+  
+  
+  .contact-info p {
+    margin: 0.5rem 0;
+  }
+
+  
+  
+  /* Responsive layout */
+  @media (min-width: 768px) {
+  
+   .contact-info {
+      flex: 1;
+    }
+
+  }
+  #contacts {
+    width: 100%;
+    background-color: white;
+  }
+  
+  .contacts-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  .map-box,
+  .form-box {
+    flex: 1 1 45%;
+    min-width: 300px;
+    height: 450px;
+    overflow: hidden;
+  }
+  
+  .form-box {
+    padding: 20px;
+  }
+  
+  .form-box form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-box h2,
+  .form-box p {
+    margin-left: 3%;
+    color: #e7cb93;
+    align-self: center;
+  }
+  
+  .form-box input,
+  .form-box textarea {
+    border-radius: 10px;
+
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 90%;
+  }
+  
+  .form-box button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #e7cb93;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 50%;
+    border-radius: 10px;
+
+    align-self: center;
+  }
+  
+  .form-box button:hover {
+    background-color: #f0896a;
+  }
+  
+  @media (max-width: 768px) 
+  {
+    .contacts-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .map-box
+     {
+      flex: 1 1 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .form-box{
+        flex: 1 1 100%;
+        width: 90%;
+        margin: 0;
+        padding: 0;
+      }
+    
+  
+    .map-box {
+      height: 300px; /* Adjust the height for smaller screens */
+    }
+  
+    .map-box iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 0;
+    }
+  
+    .form-box {
+      padding: 20px;
+    }
+
+}
+  
+/* Footer section */
+footer {
+    color: rgb(254, 255, 251);
+    text-align: center;
+    padding: clamp(8px, 3vw, 15px); /* Responsive padding for inner spacing */
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 189, 89, 0.6); /* Less transparent */
+    margin: 0 auto; /* Center footer with automatic margins */
+    font-size: clamp(0.9em, 2vw, 1.2em); /* Responsive font size for different screens */
+    box-sizing: border-box; /* Ensure padding doesn't push content outside width */
+}
+
+/* Additional styling for small screens */
+@media (max-width: 768px) {
+    footer {
+        padding: clamp(7px, 4vw, 9px); /* Adjust padding for smaller screens */
+        font-size: clamp(0.8em, 3vw, 1em); /* Slightly smaller font size on small screens */
+        margin: 0 auto; /* Ensure footer stays centered */
+    }
+}
+/* Footer styles */
+.footer-content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Footer menu styling */
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px; /* Reduced space between links and title */
+    flex-wrap: wrap;
+}
+
+.footer-menu li {
+    display: inline;
+    font-size: 1 em;
+}
+.footer-menu-inline li{
+    font-size: clamp(0.6em, 3vw, 0.8em); /* Slightly smaller font size on small screens */
+}
+
+
+.footer-menu a {
+    text-decoration: none;
+    color: rgb(254, 255, 251);
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+/* Separator style */
+.footer-menu li:nth-child(odd) {
+    color: #aaa;
+    font-weight: normal;
+}
+.footer-small {
+    padding-top: 1%;
+    font-size: clamp(0.6em, 3vw, 0.8em); /* Slightly smaller font size on small screens */
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 15px;
+    }
+    .footer-title {
+        font-size: 1em;
+        margin-bottom: 5px; /* Ensure small space on smaller screens */
+    }
+    .footer-menu {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-menu {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Mantieni inline solo il secondo menu */
+    .footer-menu-inline {
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+
+    .footer-menu li:nth-child(even) {
+        display: none;
+    }
+
+    .footer-menu-inline li:nth-child(even) {
+        display: inline; /* Riattiva i separatori nel menu orizzontale */
+    }
+}
+

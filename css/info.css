@@ -1,0 +1,548 @@
+/* Reset some default margins and styles */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+/* Background for the entire page with a shadow overlay */
+body {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0); /* trigger GPU rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+                url('../img/home.png') no-repeat center center;
+    background-size: cover;
+}
+
+/* Header section with percentage-based dimensions */
+header {
+    position: relative;
+    width: 100%;
+    height: 10vh; /* Adjusted height for better spacing */
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 189, 89, 0.6); /* Less transparent */
+    display: flex;
+    align-items: center;
+}
+
+/* Styling the header content */
+.header-content {
+    width: 90%; /* Responsive width to fit different screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 0; /* Reduced padding for more compact layout */
+}
+
+/* Icon styling with responsive dimensions and left padding */
+.header-icon {
+    width: clamp(10px, 10vw, 60px); /* Icon scales between 10px and 50px */
+    max-width: 60px; /* Limit maximum width on large screens */
+    position: absolute; /* Position the icon absolutely within its container */
+    left: 15px; /* Add padding from the left edge */
+    top: 50%; /* Center vertically within the header */
+    transform: translateY(-50%); /* Adjust to center vertically based on its height */
+    padding-right: 0.5%;
+}
+
+/* Specific styling for landscape orientation on small screens */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .header-icon {
+        width: 25px; /* Set a fixed width for landscape orientation */
+    }
+}
+
+/* Header text wrapper for h1 and subtitle */
+.header-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: calc(5px + 70px); /* Offset to the right of the icon, adjusting as needed */
+    transform: translateY(-50%); /* Adjust to center vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left within the container */
+}
+
+/* Scalable title */
+header h1 {
+    margin: 0;
+    font-size: clamp(0.5rem, 2vw, 1.3rem); /* Scales between 0.8rem and 2rem */
+    color: rgb(254, 255, 251);
+}
+
+/* Subtitle styling with scalable font */
+header .subtitle {
+    margin: 5px 0 0 0;
+    font-size: clamp(0.4rem, 1.2vw, 0.9rem); /* Scales between 0.4rem and 1.2rem */
+    font-style: italic;
+    color: white;
+}
+
+/* Landscape orientation adjustments for small screens */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .header-text {
+        left: calc(10px + 40px); /* Reduce the space in landscape orientation */
+    }
+}
+/* Navigation bar styling */
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar li {
+    color: white;
+}
+
+.nav-bar a {
+    color: rgb(254, 255, 251);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-bar a:hover {
+    color: #e7cb93; /* Change to a gold color on hover */
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+    color: rgb(254, 255, 251);
+}
+
+/* Fullscreen menu styling for mobile */
+.fullscreen-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 189, 89, 0.9); /* Less transparent */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+}
+
+.fullscreen-menu a {
+    color: rgb(254, 255, 251);
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: rgb(254, 255, 251);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive styling */
+@media (max-width: 1080px) {
+    .nav-bar ul {
+        display: none; /* Hide the menu links on small screens */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu icon on small screens */
+    }
+}
+
+
+
+/* Main content styling */
+main {
+    padding: 0; /* Remove padding from main */
+    margin: 0; /* Remove any default margin that might create space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* New wrapper for the heading */
+.formazione-header {
+    width: 100%;
+    text-align: center;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    color: white;
+    
+}
+.formazione-header h2 {
+    color: white;
+    font-size: clamp(1.5rem, 2.5vw, 4.5rem);
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+
+/* Pulsante con animazione */
+.start-button {
+    background-color: #e7cb93; 
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 350;
+    padding: 12px 24px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 20px;
+    /* Animazione iniziale */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+    border-radius: 10px;
+
+    /* Hover effect */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.start-button:hover {
+    background-color: #f0b86a;
+    transform: scale(1.05);
+}
+
+.start-button:active {
+    transform: scale(0.97);
+}
+
+/* Keyframes per slide-in */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hidden-text {
+    display: none;
+    text-align: center;
+    margin: 2%;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+#servizi {
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center the full-width section */
+    background-color: white;
+    position: relative;
+    z-index: 1; /* Ensure it stays above other elements */
+}
+
+.servizi-content {
+    padding :5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* Distribuisce equamente i riquadri */
+    row-gap: 40px; /* Imposta lo spazio verticale a 0 */
+    align-items: stretch; /* Fa in modo che tutti i riquadri abbiano la stessa altezza */
+}
+
+.servizio {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 0.3s;
+    flex-basis: 30%;
+    max-width: 300px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    font-weight: 350;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 350px;
+    border-radius: 10px;
+    /* Ombra */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.servizio.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+  
+
+.servizio-image img {
+    width: 30%;
+    height: auto;
+    margin-bottom: 0%;
+    margin-top:20%;
+}
+
+
+.servizio h3 {
+    font-size: clamp(0.9em, 2.5vw, 1.1em); /* Responsive font size */
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+
+
+}
+
+
+.servizio a {
+    text-decoration: none;
+    font-weight: 400;
+}
+
+
+
+/* Adattamento per schermi piccoli */
+@media screen and (max-width: 800px) {
+    .servizi-content {
+        padding-top :15%;
+    }
+    .servizio {
+        flex-basis: 100%; /* I riquadri occupano l'intera larghezza su schermi piccoli */
+        max-width: none;
+        max-width: 300px;
+        min-height: 350px;;
+        padding: 20px;
+    }
+
+    .servizio-image img {
+        height: auto;
+        margin-bottom: 0%;
+        margin-top: 10%;
+    }
+}
+* {
+    box-sizing: border-box;
+  }
+
+    
+#contacts {
+    width: 100%;
+  }
+  
+  .contacts-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  .map-box,
+  .form-box {
+    flex: 1 1 45%;
+    min-width: 300px;
+    min-height: 400px;
+    height: 450px;
+    overflow: hidden;
+  }
+  
+  .form-box{
+    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 189, 89, 0.6); /* Less transparent */
+  }
+  
+  .form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-box h2, .form-box p{
+    color: white;
+  }
+  
+  .form-box input,
+  .form-box textarea {
+    border-radius: 10px;
+
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  .form-box button {
+    border-radius: 10px;
+
+    padding: 12px;
+    font-size: 16px;
+    background-color: #e7cb93;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-box button:hover {
+    background-color: #f0896a;
+  }
+  
+  @media (max-width: 768px) {
+    .contacts-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .map-box,
+    .form-box {
+      flex: 1 1 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .map-box {
+      height: 300px; /* imposta un'altezza fissa */
+    }
+  
+    .map-box iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 0;
+    }
+  
+    .form-box {
+      padding: 20px;
+    }
+  }
+  
+  
+  
+/* Footer section */
+footer {
+    color: rgb(254, 255, 251);
+    text-align: center;
+    padding: clamp(8px, 3vw, 15px); /* Responsive padding for inner spacing */
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 189, 89, 0.6); /* Less transparent */
+    margin: 0 auto; /* Center footer with automatic margins */
+    font-size: clamp(0.9em, 2vw, 1.2em); /* Responsive font size for different screens */
+    box-sizing: border-box; /* Ensure padding doesn't push content outside width */
+}
+
+/* Additional styling for small screens */
+@media (max-width: 768px) {
+    footer {
+        padding: clamp(7px, 4vw, 9px); /* Adjust padding for smaller screens */
+        font-size: clamp(0.8em, 3vw, 1em); /* Slightly smaller font size on small screens */
+        margin: 0 auto; /* Ensure footer stays centered */
+    }
+}
+/* Footer styles */
+.footer-content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Footer menu styling */
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px; /* Reduced space between links and title */
+    flex-wrap: wrap;
+}
+
+.footer-menu li {
+    display: inline;
+    font-size: 1 em;
+}
+.footer-menu-inline li{
+    font-size: clamp(0.6em, 3vw, 0.8em); /* Slightly smaller font size on small screens */
+}
+
+
+.footer-menu a {
+    text-decoration: none;
+    color: rgb(254, 255, 251);
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+/* Separator style */
+.footer-menu li:nth-child(odd) {
+    color: #aaa;
+    font-weight: normal;
+}
+.footer-small {
+    padding-top: 1%;
+    font-size: clamp(0.6em, 3vw, 0.8em); /* Slightly smaller font size on small screens */
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 15px;
+    }
+    .footer-title {
+        font-size: 1em;
+        margin-bottom: 5px; /* Ensure small space on smaller screens */
+    }
+    .footer-menu {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-menu {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Mantieni inline solo il secondo menu */
+    .footer-menu-inline {
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+
+    .footer-menu li:nth-child(even) {
+        display: none;
+    }
+
+    .footer-menu-inline li:nth-child(even) {
+        display: inline; /* Riattiva i separatori nel menu orizzontale */
+    }
+}
+

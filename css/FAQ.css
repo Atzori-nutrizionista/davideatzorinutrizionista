@@ -1,0 +1,454 @@
+/* Reset some default margins and styles */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+/* Background for the entire page with a shadow overlay */
+body {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0); /* trigger GPU rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+                url('../img/home.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+
+}
+
+
+/* Header section with percentage-based dimensions */
+header {
+    position: relative;
+    width: 100%;
+    height: 10vh; /* Adjusted height for better spacing */
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 189, 89, 0.6); /* Less transparent */
+    display: flex;
+    align-items: center;
+}
+
+/* Styling the header content */
+.header-content {
+    width: 80%; /* Responsive width to fit different screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 0; /* Reduced padding for more compact layout */
+}
+
+/* Icon styling with responsive dimensions and left padding */
+.header-icon {
+    width: clamp(10px, 10vw, 60px); /* Icon scales between 10px and 50px */
+    max-width: 60px; /* Limit maximum width on large screens */
+    position: absolute; /* Position the icon absolutely within its container */
+    left: 15px; /* Add padding from the left edge */
+    top: 50%; /* Center vertically within the header */
+    transform: translateY(-50%); /* Adjust to center vertically based on its height */
+    padding-right: 0.5%;
+}
+
+/* Specific styling for landscape orientation on small screens */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .header-icon {
+        width: 25px; /* Set a fixed width for landscape orientation */
+    }
+}
+
+/* Header text wrapper for h1 and subtitle */
+.header-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: calc(5px + 70px); /* Offset to the right of the icon, adjusting as needed */
+    transform: translateY(-50%); /* Adjust to center vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left within the container */
+}
+
+/* Scalable title */
+header h1 {
+    margin: 0;
+    font-size: clamp(0.5rem, 2vw, 1.3rem); /* Scales between 0.8rem and 2rem */
+    color: rgb(254, 255, 251);
+}
+
+/* Subtitle styling with scalable font */
+header .subtitle {
+    margin: 5px 0 0 0;
+    font-size: clamp(0.4rem, 1.2vw, 0.9rem); /* Scales between 0.4rem and 1.2rem */
+    font-style: italic;
+    color: white;
+}
+
+/* Landscape orientation adjustments for small screens */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .header-text {
+        left: calc(10px + 40px); /* Reduce the space in landscape orientation */
+    }
+}
+/* Navigation bar styling */
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar li {
+    color: white;
+}
+
+.nav-bar a {
+    color: rgb(254, 255, 251);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-bar a:hover {
+    color: #333; /* Change to a gold color on hover */
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+    color: rgb(254, 255, 251);
+}
+
+/* Fullscreen menu styling for mobile */
+.fullscreen-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 189, 89, 0.9); /* Less transparent */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+}
+
+.fullscreen-menu a {
+    color: rgb(254, 255, 251);
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: rgb(254, 255, 251);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive styling */
+@media (max-width: 801px) {
+    .nav-bar ul {
+        display: none; /* Hide the menu links on small screens */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu icon on small screens */
+    }
+}
+
+/* Main content styling */
+main {
+    padding: 0; /* Remove padding from main */
+    margin: 0; /* Remove any default margin that might create space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+  
+/* Footer section */
+footer {
+    color: rgb(254, 255, 251);
+    text-align: center;
+    padding: clamp(8px, 3vw, 15px); /* Responsive padding for inner spacing */
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 189, 89, 0.6); /* Less transparent */
+    margin: 0 auto; /* Center footer with automatic margins */
+    font-size: clamp(0.9em, 2vw, 1.2em); /* Responsive font size for different screens */
+    box-sizing: border-box; /* Ensure padding doesn't push content outside width */
+}
+
+/* Additional styling for small screens */
+@media (max-width: 768px) {
+    footer {
+        padding: clamp(7px, 4vw, 9px); /* Adjust padding for smaller screens */
+        font-size: clamp(0.8em, 3vw, 1em); /* Slightly smaller font size on small screens */
+        margin: 0 auto; /* Ensure footer stays centered */
+    }
+}
+/* Footer styles */
+.footer-content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Footer menu styling */
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px; /* Reduced space between links and title */
+    flex-wrap: wrap;
+}
+
+.footer-menu li {
+    display: inline;
+    font-size: 1 em;
+}
+.footer-menu-inline li{
+    font-size: clamp(0.6em, 3vw, 0.8em); /* Slightly smaller font size on small screens */
+}
+
+
+.footer-menu a {
+    text-decoration: none;
+    color: rgb(254, 255, 251);
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+/* Separator style */
+.footer-menu li:nth-child(odd) {
+    color: #aaa;
+    font-weight: normal;
+}
+.footer-small {
+    padding-top: 1%;
+    font-size: clamp(0.6em, 3vw, 0.8em); /* Slightly smaller font size on small screens */
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 15px;
+    }
+    .footer-title {
+        font-size: 1em;
+        margin-bottom: 5px; /* Ensure small space on smaller screens */
+    }
+    .footer-menu {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-menu {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Mantieni inline solo il secondo menu */
+    .footer-menu-inline {
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+
+    .footer-menu li:nth-child(even) {
+        display: none;
+    }
+
+    .footer-menu-inline li:nth-child(even) {
+        display: inline; /* Riattiva i separatori nel menu orizzontale */
+    }
+}
+
+
+
+#formazione {
+    margin-top: 20px;
+    padding-bottom: 30%;
+    width: 100vw;
+    background-color: rgb(254, 255, 251);
+    padding: 0 clamp(10px, 5vw, 20px) clamp(10px, 5vw, 20px);
+    position: relative;
+    z-index: 1;
+}
+
+/* New wrapper for the heading */
+.formazione-header {
+width: 100%;
+text-align: center;
+padding-top: 6%;
+padding-bottom: 6%;
+
+}
+
+.formazione-header h2 {
+    font-size: clamp(1.5rem, 2.5vw, 4.5rem);
+    color: white;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.services-content {
+    max-width: 90vw;
+    width: clamp(300px, 90vw, 1200px);
+    margin: 0 auto;
+    text-align: justify;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+
+.service h3 {
+    font-size: clamp(2em, 3vw, 2.5em);
+    color: #333;
+    margin: clamp(15px, 3vw, 25px) 0;
+    font-weight: bold;
+}
+
+.service p {
+    line-height: 1.8;
+    color: #555;
+    font-size: clamp(0.9em, 2.5vw, 1.1em);
+    margin: 0 0 clamp(10px, 2vw, 15px);
+    text-align: justify;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #formazione {
+        padding: 0 clamp(8px, 3vw, 15px);
+    }
+
+    #formazione-header  h2 {
+        font-size: clamp(1.2em, 4vw, 2em);
+    }
+
+    .service h3 {
+        font-size: clamp(1em, 3vw, 1.8em);
+        margin-bottom: clamp(15px, 3vw, 25px);
+    }
+
+    .service p {
+        font-size: clamp(0.85em, 2vw, 1em);
+    }
+
+    .collapsible {
+        background-color: rgb(254, 255, 251);
+        color: #333;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        font-weight: bold; /* Makes the title bold */
+        outline: none;
+        font-size: 5px;
+        display: flex;
+        align-items: center; /* Allinea icona e testo verticalmente */
+        gap: 10px; /* Distanza tra icona e testo */
+    }
+}
+
+
+.collapsible {
+background-color: rgb(254, 255, 251);
+color: #333;
+cursor: pointer;
+padding: 18px;
+width: 100%;
+border: none;
+text-align: left;
+font-weight: bold; /* Makes the title bold */
+outline: none;
+font-size: 20px;
+display: flex;
+align-items: center; /* Allinea icona e testo verticalmente */
+gap: 10px; /* Distanza tra icona e testo */
+}
+
+.content:last-of-type {
+border-bottom: none; /* Removes border for last content */
+}
+.collapsible::before {
+content: '\25B6'; /* ▶ Triangolo orizzontale */
+color: #333;
+font-weight: bold;
+transition: transform 0.2s ease-in-out;
+}
+
+.active::before {
+content: '\25BC'; /* ▼ Triangolo verticale */
+}
+
+  
+.content {
+padding: 0 18px;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+background-color: rgb(254, 255, 251);
+border-bottom: 1px solid #ddd; /* Adds a divider */
+}
+
+.content p{
+    text-align: left;
+    font-size: clamp(0.85em, 2vw, 1em);
+    line-height: 1.5;
+}
+
+.collapsible-container {
+background-color: rgb(254, 255, 251);
+margin: 20px 0; /* Adds space above and below */
+}
+
+.styled-link {
+color: #555; /* Nice blue color */
+font-weight: bold;
+text-decoration: none; /* Removes underline */
+transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+.styled-link:hover {
+color: #A8D5BA; /* Darker blue on hover */
+text-decoration: underline; /* Underline on hover */
+}
+.content ul {
+text-align: left;
+padding-left: 1rem; /* o anche 0.8rem per stare più a sinistra */
+list-style-type: disc; /* Adds bullet points */
+line-height: 1.5;
+}
+
+.content li {
+    font-size: clamp(0.85em, 2vw, 1em);
+    line-height: 1.6;
+}
+
+

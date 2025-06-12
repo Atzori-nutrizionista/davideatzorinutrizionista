@@ -1,0 +1,354 @@
+/* General reset and styling */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Background for the entire page with a shadow overlay */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+                url('../img/home.png') no-repeat center center;    background-size: cover; /* Ensure image covers the entire background without repeating */
+}
+
+/* Header section with percentage-based dimensions */
+header {
+    position: relative;
+    width: 100%;
+    height: 10vh; /* Adjusted height for better spacing */
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 189, 89, 0.6); /* Less transparent */
+    display: flex;
+    align-items: center;
+}
+
+/* Styling the header content */
+.header-content {
+    width: 90%; /* Responsive width to fit different screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 0; /* Reduced padding for more compact layout */
+}
+
+/* Icon styling with responsive dimensions and left padding */
+.header-icon {
+    width: clamp(10px, 10vw, 60px); /* Icon scales between 10px and 50px */
+    max-width: 60px; /* Limit maximum width on large screens */
+    position: absolute; /* Position the icon absolutely within its container */
+    left: 15px; /* Add padding from the left edge */
+    top: 50%; /* Center vertically within the header */
+    transform: translateY(-50%); /* Adjust to center vertically based on its height */
+}
+
+/* Specific styling for landscape orientation on small screens */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .header-icon {
+        width: 25px; /* Set a fixed width for landscape orientation */
+    }
+}
+
+/* Header text wrapper for h1 and subtitle */
+.header-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: calc(5px + 70px); /* Offset to the right of the icon, adjusting as needed */
+    transform: translateY(-50%); /* Adjust to center vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left within the container */
+}
+
+/* Scalable title */
+header h1 {
+    margin: 0;
+    font-size: clamp(0.8rem, 2vw, 1.5rem); /* Scales between 0.8rem and 2rem */
+    color: rgb(254, 255, 251);
+}
+
+/* Subtitle styling with scalable font */
+header .subtitle {
+    margin: 5px 0 0 0;
+    font-size: clamp(0.4rem, 1.2vw, 0.9rem); /* Scales between 0.4rem and 1.2rem */
+    font-style: italic;
+    color: rgb(189, 188, 186);
+}
+
+/* Landscape orientation adjustments for small screens */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .header-text {
+        left: calc(10px + 40px); /* Reduce the space in landscape orientation */
+    }
+}
+/* Navigation bar styling */
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar a {
+    color: rgb(254, 255, 251);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effect */
+}
+.nav-bar li {
+    color: white;
+}
+.nav-bar a:hover {
+    color: #afd0af; /* Change to a gold color on hover */
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+    color: rgb(254, 255, 251);
+}
+
+/* Fullscreen menu styling for mobile */
+.fullscreen-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+}
+
+.fullscreen-menu a {
+    color: rgb(254, 255, 251);
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: rgb(254, 255, 251);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .nav-bar ul {
+        display: none; /* Hide the menu links on small screens */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu icon on small screens */
+    }
+}
+
+/* Main content styling */
+main {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out content with map at bottom */
+    align-items: center;
+    width: 100%; /* Ensure main takes up full width */
+}
+
+#termini-e-condizioni {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out content with map at bottom */
+    align-items: center;
+    width: 100%; /* Ensure main takes up full width */
+}
+.back-button {
+    display: inline-block;
+    color: black;
+    text-decoration: underline;
+    font-size: clamp(0.7em, 2vw, 1.1em); /* Font size responsive */
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 10px;
+}
+
+.back-button::before {
+    margin-right: 5px;
+}
+
+.button {
+    text-align: left;
+    width: 100%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.back-button:hover {
+    color: #A8D5BA;
+}
+/* Mostra la versione per desktop e nasconde quella per mobile di default */
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+/* Per schermi piccoli (max 600px), nasconde la versione desktop e mostra quella mobile */
+@media (max-width: 600px) {
+    .desktop-only {
+        display: none;
+    }
+    
+    .mobile-only {
+        display: block;
+    }
+}
+.terms-container{
+    text-align: justify;
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 2rem; 
+    padding-top: 1rem;
+    font-family: sans-serif; 
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(1.5em, 3vw, 2.5em);
+    padding-bottom: 4%;
+
+}
+p {
+    font-size: clamp(0.8em, 2vw, 1em);
+
+}
+
+/* Footer section */
+footer {
+    color: rgb(254, 255, 251);
+    text-align: center;
+    padding: clamp(8px, 3vw, 15px); /* Responsive padding for inner spacing */
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 189, 89, 0.6); /* Less transparent */
+    margin: 0 auto; /* Center footer with automatic margins */
+    font-size: clamp(0.9em, 2vw, 1.2em); /* Responsive font size for different screens */
+    box-sizing: border-box; /* Ensure padding doesn't push content outside width */
+}
+
+/* Additional styling for small screens */
+@media (max-width: 768px) {
+    footer {
+        padding: clamp(7px, 4vw, 9px); /* Adjust padding for smaller screens */
+        font-size: clamp(0.8em, 3vw, 1em); /* Slightly smaller font size on small screens */
+        margin: 0 auto; /* Ensure footer stays centered */
+    }
+}
+/* Footer styles */
+.footer-content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Footer menu styling */
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px; /* Reduced space between links and title */
+    flex-wrap: wrap;
+}
+
+.footer-menu li {
+    display: inline;
+    font-size: 1 em;
+}
+.footer-menu-inline li{
+    font-size: clamp(0.6em, 3vw, 0.8em); /* Slightly smaller font size on small screens */
+}
+
+
+.footer-menu a {
+    text-decoration: none;
+    color: rgb(254, 255, 251);
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Separator style */
+.footer-menu li:nth-child(odd) {
+    color: #aaa;
+    font-weight: normal;
+}
+.footer-small {
+    padding-top: 1%;
+    font-size: clamp(0.6em, 3vw, 0.8em); /* Slightly smaller font size on small screens */
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 15px;
+    }
+    .footer-title {
+        font-size: 1em;
+        margin-bottom: 5px; /* Ensure small space on smaller screens */
+    }
+    .footer-menu {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-menu {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Mantieni inline solo il secondo menu */
+    .footer-menu-inline {
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+
+    .footer-menu li:nth-child(even) {
+        display: none;
+    }
+
+    .footer-menu-inline li:nth-child(even) {
+        display: inline; /* Riattiva i separatori nel menu orizzontale */
+    }
+}
+
