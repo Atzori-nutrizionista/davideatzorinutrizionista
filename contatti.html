@@ -193,5 +193,21 @@
             menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
         }
     </script>
+    <script>
+      function inviaEmail() {
+        const nome = document.getElementById('nome').value;
+        const email = document.getElementById('email').value;
+        const messaggio = document.getElementById('messaggio').value;
+      
+        const destinatario = "davideatzorinutrizionista@gmail.com"; // Cambia con la tua email
+        const oggetto = encodeURIComponent("Contatto dal sito web");
+        const corpo = encodeURIComponent(
+          `Nome: ${nome}\nEmail: ${email}\n\nMessaggio:\n${messaggio}`
+        );
+      
+        window.location.href = `mailto:${destinatario}?subject=${oggetto}&body=${corpo}`;
+        return false;
+      }
+  </script>
 </body>
 </html>
