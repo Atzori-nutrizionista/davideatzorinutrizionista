@@ -1,227 +1,242 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - La Mia Homepage</title>
-    <link rel="icon" type="image/x-icon" href="/img/favicon_io/favicon.ico">
-    <link rel="stylesheet" href="css/percorso-nutrizionale.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+        <!-- SEO base -->
+        <title>Percorso nutrizionale – Dott. Davide Atzori | Biologo Nutrizionista a Genova</title>
+        <meta name="description" content="Scopri come si svolge il percorso nutrizionale con il Dott. Davide Atzori a Genova: prima visita (45–60 min), dieta personalizzata con supporto continuo e visita di controllo.">
+        <meta name="robots" content="index, follow, max-image-preview:large">
+        <link rel="canonical" href="https://davideatzorinutrizionista.it/percorso-nutrizionale.html">
+      
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="/img/favicon_io/favicon.ico">
+      
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="it_IT">
+        <meta property="og:site_name" content="Dott. Davide Atzori – Biologo Nutrizionista">
+        <meta property="og:title" content="Percorso nutrizionale – Dott. Davide Atzori">
+        <meta property="og:description" content="Prima visita, dieta personalizzata con supporto e visita di controllo: ecco come lavoriamo insieme.">
+        <meta property="og:url" content="https://davideatzorinutrizionista.it/percorso-nutrizionale.html">
+        <meta property="og:image" content="https://davideatzorinutrizionista.it/img/og-cover-davide-atzori.jpg">
+      
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Percorso nutrizionale – Dott. Davide Atzori">
+        <meta name="twitter:description" content="Il percorso in 3 step: prima visita, piano personalizzato con supporto e controllo.">
+        <meta name="twitter:image" content="https://davideatzorinutrizionista.it/img/og-cover-davide-atzori.jpg">
+      
+        <!-- Preconnect (se usi CDN) -->
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+      
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/percorso-nutrizionale.css">
+      
+        <!-- Structured Data JSON-LD -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Person",
+              "@id": "https://davideatzorinutrizionista.it/#davide-atzori",
+              "name": "Dott. Davide Atzori",
+              "jobTitle": "Biologo Nutrizionista",
+              "image": "https://davideatzorinutrizionista.it/img/davide-atzori.jpg",
+              "url": "https://davideatzorinutrizionista.it/",
+              "email": "mailto:davideatzorinutrizionista@gmail.com",
+              "telephone": "+39 329 278 9613",
+              "sameAs": [
+                "https://www.linkedin.com/in/davide-atzori-07148a20b",
+                "https://www.instagram.com/davideatzori.nutrizionista",
+                "https://www.facebook.com/share/17GgDoumZD/?mibextid=wwXIfr"
+              ]
+            },
+            {
+              "@type": "HowTo",
+              "@id": "https://davideatzorinutrizionista.it/percorso-nutrizionale.html#howto",
+              "name": "Percorso nutrizionale con il Dott. Davide Atzori",
+              "totalTime": "PT60M",
+              "estimatedCost": { "@type": "MonetaryAmount", "currency": "EUR" },
+              "supply": [],
+              "tool": [],
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "name": "Prima visita (45–60 min)",
+                  "text": "Colloquio su abitudini alimentari, misurazione di peso e circonferenze ed esame bioimpedenziometrico."
+                },
+                {
+                  "@type": "HowToStep",
+                  "name": "Dieta personalizzata + supporto",
+                  "text": "Consegna del piano alimentare, appuntamento successivo a circa 1 mese e supporto continuo via messaggi/email."
+                },
+                {
+                  "@type": "HowToStep",
+                  "name": "Visita di controllo",
+                  "text": "Valutazione dei progressi, eventuali adattamenti al piano e ascolto di nuove esigenze."
+                }
+              ],
+              "provider": { "@id": "https://davideatzorinutrizionista.it/#davide-atzori" },
+              "image": "https://davideatzorinutrizionista.it/img/og-cover-davide-atzori.jpg",
+              "url": "https://davideatzorinutrizionista.it/percorso-nutrizionale.html"
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://davideatzorinutrizionista.it/" },
+                { "@type": "ListItem", "position": 2, "name": "Percorso nutrizionale", "item": "https://davideatzorinutrizionista.it/percorso-nutrizionale.html" }
+              ]
+            }
+          ]
+        }
+        </script>
+      </head>
+      
 <body>
-    <header>
-        <div class="header-content">
-            <div class="header-left">
-                <img src="img/logoAD.svg" alt="Logo Icon" class="header-icon"> 
-                <div class="header-text">
-                    <h1>Dott. Davide Atzori</h1>
-                    <p class="subtitle">Biologo Nutrizionista</p>
-                </div>
-            </div>
-            <div class="nav-bar">
-                <span class="hamburger" onclick="toggleMenu()">☰</span>
-                <ul class="menu" id="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li>|</li>
-                    <li><a href="about.html">Chi sono</a></li>
-                    <li>|</li>
-                    <li><a href="percorso-nutrizionale.html">Il percorso nutrizionale</a></li>
-                    <li>|</li>
-                    <li><a href="info.html">Servizi offerti</a></li>
-                    <li>|</li>
-                    <li><a href="FAQ.html">FAQ</a></li>
-                    <li>|</li>
-                    <li><a href="contatti.html">Contatti</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="percorso">
-            <div class="contenitore">
-              <h2>Il tuo percorso nutrizionale</h2>
-              <p class="intro">Scopri come si svolgerà il nostro lavoro insieme, passo dopo passo, con il mio supporto costante.</p>
-          
-              <div class="step-container">
-                <!-- Step 1 -->
-                <div class="step">
-                  <div class="numero">1</div>
-                  <h3>Prima visita (45-60 min)</h3>
-                  <ul>
-                    <li>Colloquio sulle abitudini alimentari</li>
-                    <li>Misurazione peso e circonferenze</li>
-                    <li>Esame bioimpedenziometrico</li>
-                  </ul>
-                  <p class="descrizione">Iniziamo conoscendoci: valuteremo insieme i tuoi bisogni per un piano su misura.</p>
-                </div>
-          
-                <!-- Step 2 -->
-                <div class="step">
-                  <div class="numero">2</div>
-                  <h3>Dieta personalizzata + supporto</h3>
-                  <ul>
-                    <li>Consegna del piano alimentare</li>
-                    <li>Appuntamento dopo circa 1 mese</li>
-                    <li>Supporto continuo via messaggi/email</li>
-                  </ul>
-                  <p class="descrizione">Ti sarò vicino per chiarire ogni dubbio: all’inizio tutto è nuovo, ma non sarai solo/a.</p>
-                </div>
-          
-                <!-- Step 3 -->
-                <div class="step">
-                  <div class="numero">3</div>
-                  <h3>Visita di controllo</h3>
-                  <ul>
-                    <li>Valutazione dei progressi</li>
-                    <li>Adattamenti al piano se necessario</li>
-                    <li>Ascolto di nuove esigenze</li>
-                  </ul>
-                  <p class="descrizione">Un momento per fare il punto, crescere e continuare con successo.</p>
-                </div>
-              </div>
-          
-              <div class="cta">
-                <a href="contatti.html" class="btn">Prenota la tua prima visita</a>
-              </div>
-            </div>
-          </section>
-          
-          
- 
-    </main>
-    
-    <footer>
-        <div class="footer-content">
-            <ul class="footer-menu">
-                <li><a href="index.html">Home</a></li>
-                <li>|</li>
-                <li><a href="about.html">Chi sono</a></li>
-                <li>|</li>
-                <li><a href="percorso-nutrizionale.html">Il percorso nutrizionale</a></li>
-                <li>|</li>
-                <li><a href="info.html">Servizi offerti</a></li>
-                <li>|</li>
-                <li><a href="FAQ.html">FAQ</a></li>
-                <li>|</li>
-                <li><a href="contatti.html">Contatti</a></li>
-            </ul>         
-            <p class="footer-small">Biologo nutrizionista Davide Atzori © Tutti i diritti riservati | Igea Equipe Salute, Via Interiano 3/9b, Genova, Italia | Via Zara 19/4, Genova, Italia | Part.IVA: ######</p>
-            <ul class="footer-menu footer-menu-inline">
-                <li><a href="terminiecondizioni.html">Termini & Condizioni</a></li>
-                <li>|</li>
-                <li><a href="crediti.html">Crediti</a></li>
-            </ul> 
-        </div>
-    </footer>
 
-    
-    <!-- Fullscreen menu for mobile view -->
-    <div class="fullscreen-menu" id="fullscreenMenu">
-        <button class="close-btn" onclick="toggleMenu()">✕</button>
-        <a href="index.html" onclick="toggleMenu()">Home</a>
-        <a href="about.html" onclick="toggleMenu()">Chi sono</a>
-        <a href="info.html" onclick="toggleMenu()">Servizi offerti</a>
-        <a href="FAQ.html" onclick="toggleMenu()">FAQ</a>
-        <a href="contatti.html" onclick="toggleMenu()">Contatti</a>
+  <header>
+    <div class="header-content">
+      <div class="header-left">
+        <img src="img/logoAD.svg" alt="Logo Davide Atzori" class="header-icon" width="64" height="64" fetchpriority="high">
+        <div class="header-text">
+          <h1>Dott. Davide Atzori</h1>
+          <p class="subtitle">Biologo Nutrizionista</p>
+        </div>
+      </div>
+
+      <nav class="nav-bar" aria-label="Navigazione principale">
+        <button class="hamburger" aria-controls="menu" aria-expanded="false" onclick="toggleMenu(this)">☰
+          <span class="sr-only">Apri/chiudi menu</span>
+        </button>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Chi sono</a></li>
+          <li><a href="percorso-nutrizionale.html" aria-current="page">Il percorso nutrizionale</a></li>
+          <li><a href="info.html">Servizi offerti</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
     </div>
-    <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-        
-        for (i = 0; i < coll.length; i++) {
-          coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight){
-              content.style.maxHeight = null;
-            } else {
-              content.style.maxHeight = content.scrollHeight + "px";
-            } 
-          });
-        }
-    </script>
-        
-    <script>
-        function toggleText(button) {
-            var extraText = button.previousElementSibling;
-            if (extraText.style.display === "none" || extraText.style.display === "") {
-                extraText.style.display = "block";
-                button.textContent = "Mostra meno";
-            } else {
-                extraText.style.display = "none";
-                button.textContent = "Scopri di più";
-            }
-        }
-        </script>
-    <script>
-        // Toggle fullscreen menu display
-        function toggleMenu() {
-            const menu = document.getElementById('fullscreenMenu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        }
-    </script>
-    <script>
-        var slideIndex = 1; // Initialize with the first image
-    
-        // Open modal when a slide is clicked
-        function openModal() {
-            document.getElementById("myModal").style.display = "block";
-        }
-    
-        // Close the modal
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
-    
-        // Navigate to the current slide
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-    
-        // Show the selected slide
-        function showSlides(n) {
-            var slides = document.getElementsByClassName("mySlides");
-            var demos = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-    
-            // Ensure the index is within bounds
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-    
-            // Hide all slides
-            for (var i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-    
-            // Display the current slide
-            slides[slideIndex - 1].style.display = "block";
-    
-            // Highlight the current thumbnail
-            for (var i = 0; i < demos.length; i++) {
-                demos[i].style.opacity = "0.6";
-            }
-            demos[slideIndex - 1].style.opacity = "1";
-    
-            // Update caption
-            captionText.innerHTML = demos[slideIndex - 1].alt;
-        }
-    
-        // Navigate between slides
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-    
-        </script>
-    <script>
-        document.querySelector('.open-modal').addEventListener('click', () => {
-    document.querySelector('.modal').style.display = 'flex';
-    document.body.classList.add('modal-open');
-});
+  </header>
 
-document.querySelector('.close').addEventListener('click', () => {
-    document.querySelector('.modal').style.display = 'none';
-    document.body.classList.remove('modal-open');
-});
+  <main>
+    <section class="percorso">
+      <div class="contenitore">
+        <h2>Il tuo percorso nutrizionale</h2>
+        <p class="intro">Scopri come si svolgerà il nostro lavoro insieme, passo dopo passo, con il mio supporto costante.</p>
 
-    </script>
+        <div class="step-container">
+            <!-- Step 1 -->
+            <article class="step">
+              <div class="numero">1</div>
+              <h3>Prima visita (45–60 min)</h3>
+              <ul>
+                <li>Colloquio sulle abitudini alimentari</li>
+                <li>Misurazione peso e circonferenze</li>
+                <li>Esame bioimpedenziometrico</li>
+              </ul>
+              <p class="descrizione">Iniziamo conoscendoci: valuteremo insieme i tuoi bisogni per un piano su misura.</p>
+            </article>
+          
+            <!-- Step 2 -->
+            <article class="step">
+              <div class="numero">2</div>
+              <h3>Dieta personalizzata + supporto</h3>
+              <ul>
+                <li>Consegna del piano alimentare</li>
+                <li>Appuntamento dopo circa 1 mese</li>
+                <li>Supporto continuo via messaggi/email</li>
+              </ul>
+              <p class="descrizione">Ti sarò vicino per chiarire ogni dubbio: all’inizio tutto è nuovo, ma non sarai solo/a.</p>
+            </article>
+          
+            <!-- Step 3 -->
+            <article class="step">
+              <div class="numero">3</div>
+              <h3>Visita di controllo</h3>
+              <ul>
+                <li>Valutazione dei progressi</li>
+                <li>Adattamenti al piano se necessario</li>
+                <li>Ascolto di nuove esigenze</li>
+              </ul>
+              <p class="descrizione">Un momento per fare il punto, crescere e continuare con successo.</p>
+            </article>
+          
+            <!-- Consulenza Online -->
+            <article class="step step-online">
+                <div class="numero">💻</div>
+                <h3>Consulenza Online</h3>
+                <p class="descrizione">
+                La visita online è un’ottima soluzione in caso di imprevisti o esigenze particolari.  
+                Offre maggiore flessibilità sugli orari ed è utile sia per rilasciare piani alimentari personalizzati,  
+                sia per conoscerci meglio e ricevere una consulenza nutrizionale a distanza.
+                </p>
+            </article>
+  
+          </div>
+          
+        <div class="cta">
+          <a href="contatti.html" class="btn">Prenota la tua prima visita</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <ul class="footer-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Chi sono</a></li>
+        <li><a href="percorso-nutrizionale.html" aria-current="page">Il percorso nutrizionale</a></li>
+        <li><a href="info.html">Servizi offerti</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+      <p class="footer-small">
+        Biologo nutrizionista Davide Atzori © Tutti i diritti riservati |
+        Igea Equipe Salute, Via Interiano 3/9b, Genova, Italia |
+        Via Zara 19/4, Genova, Italia | Part.IVA: ######
+      </p>
+      <ul class="footer-menu footer-menu-inline">
+        <li><a href="terminiecondizioni.html">Termini &amp; Condizioni</a></li>
+        <li><a href="crediti.html">Crediti</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Fullscreen menu mobile -->
+  <div class="fullscreen-menu" id="fullscreenMenu" hidden>
+    <button class="close-btn" onclick="toggleMenu(this)" aria-label="Chiudi menu">✕</button>
+    <a href="index.html" onclick="toggleMenu(this)">Home</a>
+    <a href="about.html" onclick="toggleMenu(this)">Chi sono</a>
+    <a href="percorso-nutrizionale.html" onclick="toggleMenu(this)" aria-current="page">Il percorso nutrizionale</a>
+    <a href="info.html" onclick="toggleMenu(this)">Servizi offerti</a>
+    <a href="FAQ.html" onclick="toggleMenu(this)">FAQ</a>
+    <a href="contatti.html" onclick="toggleMenu(this)">Contatti</a>
+  </div>
+
+  <script>
+    // Toggle fullscreen menu (accessibile)
+    function toggleMenu(btn){
+      const menu = document.getElementById('fullscreenMenu');
+      const isOpen = !menu.hasAttribute('hidden');
+      if (isOpen){
+        menu.setAttribute('hidden','');
+        if (btn && btn.tagName === 'BUTTON' && btn.hasAttribute('aria-expanded')){
+          btn.setAttribute('aria-expanded','false');
+        }
+      } else {
+        menu.removeAttribute('hidden');
+        if (btn && btn.tagName === 'BUTTON' && btn.hasAttribute('aria-expanded')){
+          btn.setAttribute('aria-expanded','true');
+        }
+      }
+    }
+  </script>
+
 </body>
 </html>
