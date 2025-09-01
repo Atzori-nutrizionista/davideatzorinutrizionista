@@ -1,213 +1,297 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - La Mia Homepage</title>
-    <link rel="icon" type="image/x-icon" href="/img/favicon_io/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contatti – Dott. Davide Atzori | Biologo Nutrizionista a Genova</title>
+
+    <!-- Meta base -->
+    <meta name="description" content="Contatta il Dott. Davide Atzori, Biologo Nutrizionista a Genova. Prenota una consulenza o richiedi informazioni su percorsi nutrizionali e servizi offerti.">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <link rel="canonical" href="https://davideatzorinutrizionista.it/contatti.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicon_io/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Contatti – Dott. Davide Atzori | Biologo Nutrizionista a Genova">
+    <meta property="og:description" content="Scrivimi per prenotare una consulenza nutrizionale o per informazioni.">
+    <meta property="og:url" content="https://davideatzorinutrizionista.it/contatti.html">
+    <meta property="og:image" content="https://davideatzorinutrizionista.it/img/og-cover-davide-atzori.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contatti – Dott. Davide Atzori">
+    <meta name="twitter:description" content="Prenota una consulenza o chiedi informazioni.">
+    <meta name="twitter:image" content="https://davideatzorinutrizionista.it/img/og-cover-davide-atzori.jpg">
+
+    <!-- Preconnect (se usi CDN) -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/contatti.css">
+
+    <!-- Icon set -->
     <link href="https://cdn.jsdelivr.net/npm/lucide-static@0.258.0/font/lucide.css" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <div class="header-left">
-                <img src="img/logoAD.svg" alt="Logo Icon" class="header-icon"> 
-                <div class="header-text">
-                    <h1>Dott. Davide Atzori</h1>
-                    <p class="subtitle">Biologo Nutrizionista</p>
-                </div>
-            </div>
-            <div class="nav-bar">
-                <span class="hamburger" onclick="toggleMenu()">☰</span>
-                <ul class="menu" id="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li>|</li>
-                    <li><a href="about.html">Chi sono</a></li>
-                    <li>|</li>
-                    <li><a href="percorso-nutrizionale.html">Il percorso nutrizionale</a></li>
-                    <li>|</li>
-                    <li><a href="info.html">Servizi offerti</a></li>
-                    <li>|</li>
-                    <li><a href="FAQ.html">FAQ</a></li>
-                    <li>|</li>
-                    <li><a href="contatti.html">Contatti</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-   
-    <main>
 
-        <section id="team-section" class="info-section">
-            <h2>Contattami!</h2>  
-            <p>Hai domande o vuoi prenotare una consulenza? Scrivimi!</p>
 
-        </section>
-
-        <section class="contatti">
-            <div class="contatti-contenitore">
-              <!-- Testo a sinistra -->
-              <div class="testo">
-                <h2>I miei contatti</h2>
-              </div>
-              
-              <!-- Separatore verticale -->
-              <div class="separatore"></div>
-          
-              <!-- Lista dei contatti a destra -->
-              <div class="lista-contatti">
-                <ul>
-                  <li>
-                    <img src="img/arroba.png" alt="Email" class="icon email" />
-                    <a href="mailto:davideatzorinutrizionista@gmail.com" class="link">
-                      <span>davideatzorinutrizionista@gmail.com</span>
-                    </a> <!-- Manca il tag di chiusura per il link -->
-                  </li>
-                  <li>
-                    <img src="img/call.png" alt="Telefono" class="icon email" />
-                    <a href="tel:+393292789613" class="link">
-                      <span>+39 329 278 9613</span>
-                    </a>
-                  </li>
-                  <li>
-                    <img src="img/linkedinicon.png" alt="LinkedIn" class="icon email" />
-                    <a href="http://linkedin.com/in/davide-atzori-07148a20b" target="_blank" rel="noopener noreferrer" class="link">
-                      <span>/davide-atzori</span>
-                    </a> 
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          
-          <section class="contatti">
-            <div class="contatti-contenitore">
-              <!-- Testo a sinistra -->
-              <div class="testo">
-                <h2>Dove trovarmi</h2>
-              </div>
-              
-              <!-- Separatore verticale -->
-              <div class="separatore"></div>
-          
-              <!-- Lista dei contatti a destra -->
-              <div class="lista-contatti">
-                <ul>
-                  <li>
-                    <img src="img/location.png" alt="Indirizzo1" class="icon indirizzo" />
-                    <a href="https://www.google.com/maps?q=Igea+Equipe+Salute%2C+Via+Interiano+3%2F9b%2C+Genova%2C+Italia" target="_blank" class="link">
-                      <span>Igea Equipe Salute, Via Interiano 3/9b, Genova</span>
-                    </a>
-                  </li>
-                  <li>
-                    <img src="img/location.png" alt="Indirizzo2" class="icon indirizzo" />
-                    <a href="https://www.google.com/maps?q=Via+Zara+19%2F4%2C+Genova%2C+Italia" target="_blank" class="link">
-                      <span>Via Zara 19/4, Genova</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          
-
-        <section id="contact-info" class="info-section">
-            <p>Seguimi su:</p>
-            <a href="http://linkedin.com/in/davide-atzori-07148a20b" target="_blank" rel="noopener noreferrer">
-                <img src="img/linkedin.png" alt="Linkedin" class="in-icon">
-            </a>       
-            <a href="https://www.instagram.com/davideatzori.nutrizionista?igsh=Y3FsY3FhYmJrcHA1" target="_blank" rel="noopener noreferrer">
-                <img src="img/instagram.png" alt="Linkedin" class="in-icon">
-            </a>   
-            <a href="https://www.facebook.com/share/17GgDoumZD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
-              <img src="img/facebook.png" alt="Linkedin" class="in-icon">
-            </a>   
-        </section>
-
-        <section id="contacts">
-            <div class="contacts-wrapper">
-          
-              <!-- Mappa -->
-              <div class="map-box">
-                <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12105.19412257213!2d8.94396544231283!3d44.418091707868165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d4321c94dcb9fd%3A0xc5c45b28ba826c1b!2sVia%20Zara%2019%2F4%2C%2020163%20Genova%2C%20Italia!5e0!3m2!1sen!2sus!4v1676499452920!5m2!1sen!2sus" 
-                style="width: 100%; height: 100%; display: block; border: 0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-              </div>
-          
-              <!-- Form -->
-              <div class="form-box">
-                <h2>Contattami</h2>
-                <p>Hai domande o vuoi prenotare una consulenza? Scrivimi!</p>
-                <form onsubmit="return inviaEmail();">
-                  <input type="text" id="nome" placeholder="Il tuo nome" required>
-                  <input type="email" id="email" placeholder="La tua email" required>
-                  <textarea id="messaggio" rows="5" placeholder="Il tuo messaggio" required></textarea>
-                  <button type="submit">Invia messaggio</button>
-                </form>
-              </div>
-          
-            </div>
-        </section>
-    </main>
-        <footer>
-            <div class="footer-content">
-                <ul class="footer-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li>|</li>
-                    <li><a href="about.html">Chi sono</a></li>
-                    <li>|</li>
-                    <li><a href="percorso-nutrizionale.html">Il percorso nutrizionale</a></li>
-                    <li>|</li>
-                    <li><a href="info.html">Servizi offerti</a></li>
-                    <li>|</li>
-                    <li><a href="FAQ.html">FAQ</a></li>
-                    <li>|</li>
-                    <li><a href="contatti.html">Contatti</a></li>
-                </ul>         
-                <p class="footer-small">Biologo nutrizionista Davide Atzori © Tutti i diritti riservati | Igea Equipe Salute, Via Interiano 3/9b, Genova, Italia | Via Zara 19/4, Genova, Italia | Part.IVA: ######</p>
-                <ul class="footer-menu footer-menu-inline">
-                    <li><a href="terminiecondizioni.html">Termini & Condizioni</a></li>
-                    <li>|</li>
-                    <li><a href="crediti.html">Crediti</a></li>
-                </ul> 
-            </div>
-        </footer>
-        <!-- Fullscreen menu for mobile view -->
-        <div class="fullscreen-menu" id="fullscreenMenu">
-            <button class="close-btn" onclick="toggleMenu()">✕</button>
-            <a href="index.html" onclick="toggleMenu()">Home</a>
-            <a href="about.html" onclick="toggleMenu()">Chi sono</a>
-            <a href="percorso-nutrizionale.html" onclick="toggleMenu()">Il percorso nutrizionale</a>
-            <a href="info.html" onclick="toggleMenu()">Servizi offerti</a>
-            <a href="FAQ.html" onclick="toggleMenu()">FAQ</a>
-            <a href="contatti.html" onclick="toggleMenu()">Contatti</a>
-        </div>
-    <script>
-        // Toggle fullscreen menu display
-        function toggleMenu() {
-            const menu = document.getElementById('fullscreenMenu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://davideatzorinutrizionista.it/#davide-atzori",
+          "name": "Dott. Davide Atzori",
+          "jobTitle": "Biologo Nutrizionista",
+          "image": "https://davideatzorinutrizionista.it/img/davide-atzori.jpg",
+          "url": "https://davideatzorinutrizionista.it/",
+          "email": "mailto:davideatzorinutrizionista@gmail.com",
+          "telephone": "+39 329 278 9613",
+          "sameAs": [
+            "https://www.linkedin.com/in/davide-atzori-07148a20b",
+            "https://www.instagram.com/davideatzorinutrizionista",
+            "https://www.facebook.com/share/17GgDoumZD/?mibextid=wwXIfr"
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://davideatzorinutrizionista.it/#studio-igea",
+          "name": "Igea Equipe Salute – Via Interiano 3/9b",
+          "image": "https://davideatzorinutrizionista.it/img/og-cover-davide-atzori.jpg",
+          "telephone": "+39 329 278 9613",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via Interiano 3/9b",
+            "addressLocality": "Genova",
+            "addressCountry": "IT"
+          },
+          "hasMap": "https://www.google.com/maps?q=Igea+Equipe+Salute,+Via+Interiano+3/9b,+Genova,+Italia",
+          "url": "https://davideatzorinutrizionista.it/contatti.html",
+          "areaServed": "Genova e provincia"
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://davideatzorinutrizionista.it/#studio-zara",
+          "name": "Studio di Nutrizione – Via Zara 19/4",
+          "image": "https://davideatzorinutrizionista.it/img/og-cover-davide-atzori.jpg",
+          "telephone": "+39 329 278 9613",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via Zara 19/4",
+            "addressLocality": "Genova",
+            "addressCountry": "IT"
+          },
+          "hasMap": "https://www.google.com/maps?q=Via+Zara+19/4,+Genova,+Italia",
+          "url": "https://davideatzorinutrizionista.it/contatti.html"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://davideatzorinutrizionista.it/" },
+            { "@type": "ListItem", "position": 2, "name": "Contatti", "item": "https://davideatzorinutrizionista.it/contatti.html" }
+          ]
         }
+      ]
+    }
     </script>
-    <script>
-      function inviaEmail() {
-        const nome = document.getElementById('nome').value;
-        const email = document.getElementById('email').value;
-        const messaggio = document.getElementById('messaggio').value;
-      
-        const destinatario = "davideatzorinutrizionista@gmail.com"; // Cambia con la tua email
-        const oggetto = encodeURIComponent("Contatto dal sito web");
-        const corpo = encodeURIComponent(
-          `Nome: ${nome}\nEmail: ${email}\n\nMessaggio:\n${messaggio}`
-        );
-      
-        window.location.href = `mailto:${destinatario}?subject=${oggetto}&body=${corpo}`;
-        return false;
+  </head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="header-left">
+        <img src="img/logoAD.svg" alt="Logo Davide Atzori" class="header-icon" width="64" height="64" fetchpriority="high">
+        <div class="header-text">
+          <h1>Dott. Davide Atzori</h1>
+          <p class="subtitle">Biologo Nutrizionista</p>
+        </div>
+      </div>
+
+      <nav class="nav-bar" aria-label="Navigazione principale">
+        <button class="hamburger" aria-controls="menu" aria-expanded="false" onclick="toggleMenu(this)">☰<span class="sr-only">Apri/chiudi menu</span></button>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Chi sono</a></li>
+          <li><a href="percorso-nutrizionale.html">Il percorso nutrizionale</a></li>
+          <li><a href="info.html">Servizi offerti</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+          <li><a href="contatti.html" aria-current="page">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="team-section" class="info-section">
+      <h2>Contattami!</h2>
+      <p>Hai domande o vuoi prenotare una consulenza? Scrivimi!</p>
+    </section>
+
+    <!-- Contatti -->
+    <section class="contatti">
+      <div class="contatti-contenitore">
+        <div class="testo"><h2>I miei contatti</h2></div>
+        <div class="separatore"></div>
+        <div class="lista-contatti">
+          <ul>
+            <li>
+              <img src="img/arroba.png" alt="Email" class="icon" width="24" height="24" loading="lazy">
+              <a href="mailto:davideatzorinutrizionista@gmail.com" class="link">
+                <span>davideatzorinutrizionista@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <img src="img/call.png" alt="Telefono" class="icon" width="24" height="24" loading="lazy">
+              <a href="tel:+393292789613" class="link">
+                <span>+39 329 278 9613</span>
+              </a>
+            </li>
+            <li>
+              <img src="img/linkedinicon.png" alt="LinkedIn" class="icon" width="24" height="24" loading="lazy">
+              <a href="https://linkedin.com/in/davide-atzori-07148a20b" target="_blank" rel="noopener noreferrer" class="link" title="Profilo LinkedIn di Davide Atzori (si apre in nuova scheda)">
+                <span>/davide-atzori</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dove trovarmi -->
+    <section class="contatti">
+      <div class="contatti-contenitore">
+        <div class="testo"><h2>Dove trovarmi</h2></div>
+        <div class="separatore"></div>
+        <div class="lista-contatti">
+          <ul>
+            <li>
+              <img src="img/location.png" alt="Indirizzo Igea Equipe Salute" class="icon" width="24" height="24" loading="lazy">
+              <a href="https://www.google.com/maps?q=Igea+Equipe+Salute,+Via+Interiano+3/9b,+Genova,+Italia" target="_blank" rel="noopener noreferrer" class="link" title="Apri su Google Maps: Igea Equipe Salute, Via Interiano 3/9b, Genova">
+                <span>Igea Equipe Salute, Via Interiano 3/9b, Genova</span>
+              </a>
+            </li>
+            <li>
+              <img src="img/location.png" alt="Indirizzo Via Zara 19/4" class="icon" width="24" height="24" loading="lazy">
+              <a href="https://www.google.com/maps?q=Via+Zara+19/4,+Genova,+Italia" target="_blank" rel="noopener noreferrer" class="link" title="Apri su Google Maps: Via Zara 19/4, Genova">
+                <span>Via Zara 19/4, Genova</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social -->
+    <section id="contact-info" class="info-section">
+      <p>Seguimi su:</p>
+      <a href="https://linkedin.com/in/davide-atzori-07148a20b" target="_blank" rel="noopener noreferrer" title="Profilo LinkedIn">
+        <img src="img/linkedin.png" alt="LinkedIn" class="in-icon" width="32" height="32" loading="lazy">
+      </a>
+      <a href="https://www.instagram.com/davideatzori.nutrizionista?igsh=Y3FsY3FhYmJrcHA1" target="_blank" rel="noopener noreferrer" title="Profilo Instagram">
+        <img src="img/insta.png" alt="Instagram" class="in-icon" width="32" height="32" loading="lazy">
+      </a>
+      <a href="https://www.facebook.com/share/17GgDoumZD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" title="Pagina Facebook">
+        <img src="img/facebook.png" alt="Facebook" class="in-icon" width="32" height="32" loading="lazy">
+      </a>
+    </section>
+
+    <!-- Mappa + Form -->
+    <section id="contacts">
+      <div class="contacts-wrapper">
+        <div class="map-box">
+          <iframe
+            title="Mappa studio di Via Zara 19/4, Genova"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12105.19412257213!2d8.94396544231283!3d44.418091707868165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d4321c94dcb9fd%3A0xc5c45b28ba826c1b!2sVia%20Zara%2019%2F4%2C%2020163%20Genova%2C%20Italia!5e0!3m2!1sit!2sit!4v1676499452920!5m2!1sit!2sit"
+            style="width:100%;height:100%;border:0;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <div class="form-box">
+          <h2>Contattami</h2>
+          <p>Hai domande o vuoi prenotare una consulenza? Scrivimi!</p>
+          <form onsubmit="return inviaEmail();" aria-label="Modulo di contatto">
+            <label class="sr-only" for="nome">Nome</label>
+            <input type="text" id="nome" name="name" placeholder="Il tuo nome" autocomplete="name" required>
+            <label class="sr-only" for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="La tua email" autocomplete="email" required>
+            <label class="sr-only" for="messaggio">Messaggio</label>
+            <textarea id="messaggio" name="message" rows="5" placeholder="Il tuo messaggio" required></textarea>
+            <button type="submit">Invia messaggio</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <ul class="footer-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Chi sono</a></li>
+        <li><a href="percorso-nutrizionale.html">Il percorso nutrizionale</a></li>
+        <li><a href="info.html">Servizi offerti</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        <li><a href="contatti.html" aria-current="page">Contatti</a></li>
+      </ul>
+      <p class="footer-small">
+        Biologo nutrizionista Davide Atzori © Tutti i diritti riservati |
+        Igea Equipe Salute, Via Interiano 3/9b, Genova, Italia |
+        Via Zara 19/4, Genova, Italia | Part.IVA: ######
+      </p>
+      <ul class="footer-menu footer-menu-inline">
+        <li><a href="terminiecondizioni.html">Termini & Condizioni</a></li>
+        <li><a href="crediti.html">Crediti</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Fullscreen menu -->
+  <div class="fullscreen-menu" id="fullscreenMenu" hidden>
+    <button class="close-btn" onclick="toggleMenu(this)" aria-label="Chiudi menu">✕</button>
+    <a href="index.html" onclick="toggleMenu(this)">Home</a>
+    <a href="about.html" onclick="toggleMenu(this)">Chi sono</a>
+    <a href="percorso-nutrizionale.html" onclick="toggleMenu(this)">Il percorso nutrizionale</a>
+    <a href="info.html" onclick="toggleMenu(this)">Servizi offerti</a>
+    <a href="FAQ.html" onclick="toggleMenu(this)">FAQ</a>
+    <a href="contatti.html" onclick="toggleMenu(this)">Contatti</a>
+  </div>
+
+  <script>
+    function toggleMenu(btn) {
+      const menu = document.getElementById('fullscreenMenu');
+      const isOpen = !menu.hasAttribute('hidden');
+      if (isOpen) {
+        menu.setAttribute('hidden', '');
+        if (btn && btn.tagName === 'BUTTON' && btn.hasAttribute('aria-expanded')) {
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      } else {
+        menu.removeAttribute('hidden');
+        if (btn && btn.tagName === 'BUTTON' && btn.hasAttribute('aria-expanded')) {
+          btn.setAttribute('aria-expanded', 'true');
+        }
       }
+    }
+
+    function inviaEmail() {
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const messaggio = document.getElementById('messaggio').value.trim();
+      const destinatario = "davideatzorinutrizionista@gmail.com";
+      const oggetto = encodeURIComponent("Contatto dal sito web");
+      const corpo = encodeURIComponent(`Nome: ${nome}\nEmail: ${email}\n\nMessaggio:\n${messaggio}`);
+      window.location.href = `mailto:${destinatario}?subject=${oggetto}&body=${corpo}`;
+      return false;
+    }
   </script>
+
 </body>
 </html>
