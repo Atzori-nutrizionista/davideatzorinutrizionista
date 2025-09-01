@@ -1,142 +1,240 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - La Mia Homepage</title>
-    <link rel="icon" type="image/x-icon" href="/img/favicon_io/favicon.ico">
-    <link rel="stylesheet" href="css/FAQ.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ – Dott. Davide Atzori | Biologo Nutrizionista a Genova</title>
+
+<!-- Meta base -->
+<meta name="description" content="Domande frequenti sulla visita nutrizionale, durata, pasto libero ed esame bioimpedenziometrico con il Dott. Davide Atzori, Biologo Nutrizionista a Genova.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://davideatzorinutrizionista.it/FAQ.html">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/img/favicon_io/favicon.ico">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="FAQ – Dott. Davide Atzori | Biologo Nutrizionista a Genova">
+<meta property="og:description" content="Tutte le risposte su visite, piano alimentare e bioimpedenziometria.">
+<meta property="og:url" content="https://davideatzorinutrizionista.it/FAQ.html">
+<meta property="og:image" content="https://davideatzorinutrizionista.it/img/og-cover-davide-atzori.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FAQ – Dott. Davide Atzori">
+<meta name="twitter:description" content="Domande frequenti su visite e percorsi nutrizionali.">
+<meta name="twitter:image" content="https://davideatzorinutrizionista.it/img/og-cover-davide-atzori.jpg">
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/FAQ.css">
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://davideatzorinutrizionista.it/" },
+          { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://davideatzorinutrizionista.it/FAQ.html" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://davideatzorinutrizionista.it/FAQ.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Devo portare qualcosa alla visita?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "È preferibile portare le analisi del sangue più recenti, ma non è strettamente necessario. Aiutano a evidenziare eventuali aspetti da approfondire per personalizzare la dieta."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto dura la visita?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La prima visita dura circa 45–60 minuti: anamnesi e abitudini, rilevazione di peso e circonferenze, esame bioimpedenziometrico e piano alimentare personalizzato. Segue un controllo dopo ~1 mese, con supporto disponibile nel frattempo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ho il pasto libero nella dieta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sì. Il piano è pensato per essere sostenibile: partiamo anche dai cibi irrinunciabili e costruiamo uno stile alimentare realistico nelle giuste proporzioni, evitando restrizioni estreme."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Prima dell’esame bioimpedenziometrico, quali regole seguire?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Per non alterare i risultati: evitare esercizio fisico 1 ora prima; evitare di mangiare 3 ore prima; evitare diuretici per 7 giorni (se possibile e se non indispensabili); svuotare la vescica 30' prima; limitare alcol 48 ore prima; presentarsi ben idratati."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
+      
 <body>
 
-    <header>
-        <div class="header-content">
-            <div class="header-left">
-                <img src="img/logoAD.svg" alt="Logo Icon" class="header-icon"> 
-                <div class="header-text">
-                    <h1>Dott. Davide Atzori</h1>
-                    <p class="subtitle">Biologo Nutrizionista</p>
-                </div>
-            </div>
-            <div class="nav-bar">
-                <span class="hamburger" onclick="toggleMenu()">☰</span>
-                <ul class="menu" id="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li>|</li>
-                    <li><a href="about.html">Chi sono</a></li>
-                    <li>|</li>
-                    <li><a href="percorso-nutrizionale.html">Il percorso nutrizionale</a></li>
-                    <li>|</li>
-                    <li><a href="info.html">Servizi offerti</a></li>
-                    <li>|</li>
-                    <li><a href="FAQ.html">FAQ</a></li>
-                    <li>|</li>
-                    <li><a href="contatti.html">Contatti</a></li>
-                </ul>
-            </div>
+  <header>
+    <div class="header-content">
+      <div class="header-left">
+        <img src="img/logoAD.svg" alt="Logo Davide Atzori" class="header-icon" width="64" height="64" fetchpriority="high">
+        <div class="header-text">
+          <h1>Dott. Davide Atzori</h1>
+          <p class="subtitle">Biologo Nutrizionista</p>
         </div>
-    </header>
-    <main>
-        <!-- Testo a sinistra -->
-        <div class="formazione-header">
-            <h2>Le FAQ più frequenti</h2>
-        </div>
-        <section id="formazione">
-         
-            <div class="services-content">
-                <div class="collapsible-container">
-                    <button class="collapsible">Devo portare qualcosa alla visita?</button>
-                    <div class="content">
-                        <p>Sarebbe preferibile portare le analisi del sangue più recenti. Tuttavia non è un criterio strettamente necessario, serve solo ad evidenziare possibili punti da approfondire per sviluppare poi la dieta.</p>
-                    </div>
-                    <button class="collapsible">Quanto dura la visita? </button>
-                    <div class="content">
-                        <p>La prima visita dura circa 45-60 minuti ed è composta da una parte iniziale in cui mi parlerai delle tue abitudini alimentari e non. Successivamente misurerò il peso e le tue circonferenze corporee. Infine, svolgeremo l’esame bioimpedenziometrico, grazie al quale si potrà vedere più nel dettaglio la tua composizione corporea. Come secondo step ti verrà data una dieta, adattata alle tue esigenze e alla tua persona e fisseremo un ulteriore appuntamento dopo circa 1 mese. Nel frattempo io ti sarò da supporto costante durante questo primo periodo per cercare di risolvere ogni tuo dubbio o timore. Infatti, come tutte le novità, all’inizio una dieta può spaventare, per questo motivo io cercherò di aiutarti sotto ogni punto di vista. Successivamente ci vedremo alla visita di controllo e mi aggiornerai sulla situazione: se sono sorti problemi o se sono nate nuove necessità.
-                        </p>
-                    </div>
-                    <button class="collapsible">Ho il pasto libero nella dieta? </button>
-                    <div class="content">
-                        <p>Io non credo nelle diete eccessivamente restrittive e penso che sia fondamentale trovare un buon compromesso per fare in modo che la dieta possa diventare sostenibile nel tempo. È quindi fondamentale non avere timori dettati dallo sgarro o dalle quantità, soprattutto perché c’è il rischio che possano sorgere meccanismi compensatori, i quali non sono mai un buon segnale. Io, infatti, in prima visita chiedo sempre se c’è un particolare tipo di cibo a cui non si può rinunciare per svariati motivi. Da lì si parte per costruire poi uno stile alimentare che possa andare, nelle dovute proporzioni, di pari passo con le esigenze del paziente.</p>
-                    </div>
-                    <button class="collapsible">Prima dell’esame bio-impedenziometrico quali sono le regole da seguire?</button>
-                    <div class="content">
-                        <p>Vi sono alcune semplici regole per non “falsare” i risultati finali di quest’esame:</p>
-                        <ul>
-                            <li>Evitare l’esercizio fisico almeno 1 ora prima del test</li>
-                            <li>tare di mangiare 3 ore prima del test</li>
-                            <li>Evitare i diuretici per 7 giorni prima del test (se vi è possibilità e se i farmaci NON sono necessari per il mantenimento dello stato di salute)</li>
-                            <li>Svuotare la vescica circa 30 minuti prima del test</li>
-                            <li>Limitare il consumo di alcol 48 ore prima del test</li>
-                            <li>Eseguire il test in buone condizioni di idratazione</li>
-                        </ul>
-                    </div>
-                    
-                </div>
-                
-            </div>
+      </div>
+
+      <nav class="nav-bar" aria-label="Navigazione principale">
+        <button class="hamburger" aria-controls="menu" aria-expanded="false" onclick="toggleMenu(this)">☰<span class="sr-only">Apri/chiudi menu</span></button>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Chi sono</a></li>
+          <li><a href="percorso-nutrizionale.html">Il percorso nutrizionale</a></li>
+          <li><a href="info.html">Servizi offerti</a></li>
+          <li><a href="FAQ.html" aria-current="page">FAQ</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="formazione-header">
+      <h1>Le FAQ più frequenti</h1>
+    </div>
+
+    <section id="formazione">
         
-        </section>
-          
+      <div class="services-content">
+        <div class="collapsible-container" role="list">
 
-    </main>
-        <footer>
-            <div class="footer-content">
-                <ul class="footer-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li>|</li>
-                    <li><a href="about.html">Chi sono</a></li>
-                    <li>|</li>
-                    <li><a href="percorso-nutrizionale.html">Il percorso nutrizionale</a></li>
-                    <li>|</li>
-                    <li><a href="info.html">Servizi offerti</a></li>
-                    <li>|</li>
-                    <li><a href="FAQ.html">FAQ</a></li>
-                    <li>|</li>
-                    <li><a href="contatti.html">Contatti</a></li>
-                </ul>         
-                <p class="footer-small">Biologo nutrizionista Davide Atzori © Tutti i diritti riservati | Igea Equipe Salute, Via Interiano 3/9b, Genova, Italia | Via Zara 19/4, Genova, Italia | Part.IVA: ######</p>
-                <ul class="footer-menu footer-menu-inline">
-                    <li><a href="terminiecondizioni.html">Termini & Condizioni</a></li>
-                    <li>|</li>
-                    <li><a href="crediti.html">Crediti</a></li>
-                </ul> 
-            </div>
-        </footer>
+          <button class="collapsible" aria-expanded="false">Cosa devo portare alla visita?</button>
+          <div class="content" hidden>
+            <p>Sarebbe preferibile portare le analisi del sangue più recenti. Tuttavia, non è un criterio strettamente necessario, serve solo ad evidenziare possibili punti da approfondire per sviluppare poi la dieta.</p>
+          </div>
 
-        <!-- Fullscreen menu for mobile view -->
-        <div class="fullscreen-menu" id="fullscreenMenu">
-            <button class="close-btn" onclick="toggleMenu()">✕</button>
-            <a href="index.html" onclick="toggleMenu()">Home</a>
-            <a href="about.html" onclick="toggleMenu()">Chi sono</a>
-            <a href="percorso-nutrizionale.html" onclick="toggleMenu()">Il percorso nutrizionale</a>
-            <a href="info.html" onclick="toggleMenu()">Servizi offerti</a>
-            <a href="FAQ.html" onclick="toggleMenu()">FAQ</a>
-            <a href="contatti.html" onclick="toggleMenu()">Contatti</a>
+          <button class="collapsible" aria-expanded="false">Quanto dura la visita?</button>
+          <div class="content" hidden>
+            <p>La prima visita dura circa 45-60 minuti ed è composta da una parte iniziale in cui mi parlerai delle tue abitudini alimentari e non. Successivamente misurerò il peso e le tue circonferenze corporee. Infine, svolgeremo l’esame bioimpedenziometrico, grazie al quale si potrà vedere più nel dettaglio la tua composizione corporea. Come secondo step ti verrà data una dieta, adattata alle tue esigenze e alla tua persona e fisseremo un ulteriore appuntamento dopo circa 1 mese. Nel frattempo, io ti sarò da supporto costante durante questo primo periodo per cercare di risolvere ogni tuo dubbio o timore. Infatti, come tutte le novità, all’inizio una dieta può spaventare, per questo motivo io cercherò di aiutarti sotto ogni punto di vista. Successivamente ci vedremo alla visita di controllo e mi aggiornerai sulla situazione: se sono sorti problemi o se sono nate nuove necessità.</p>
+          </div>
+
+          <button class="collapsible" aria-expanded="false">Ho il pasto libero nella dieta?</button>
+          <div class="content" hidden>
+            <p>Io non credo nelle diete eccessivamente restrittive e penso che sia fondamentale trovare un buon compromesso per fare in modo che la dieta possa diventare sostenibile nel tempo. È quindi fondamentale non avere timori dettati dallo sgarro o dalle quantità, soprattutto perché c’è il rischio che possano sorgere meccanismi compensatori, i quali non sono mai un buon segnale. Io, infatti, in prima visita chiedo sempre se c’è un particolare tipo di cibo a cui non si può rinunciare per svariati motivi. Da lì si parte per costruire poi uno stile alimentare che possa andare, nelle dovute proporzioni, di pari passo con le esigenze del paziente.</p>
+          </div>
+
+          <button class="collapsible" aria-expanded="false">Prima dell’esame bioimpedenziometrico, quali regole seguire?</button>
+          <div class="content" hidden>
+            <p>Vi sono alcune semplici regole per non “falsare” i risultati finali di quest’esame:</p>
+            <ul>
+              <li>Evitare esercizio fisico almeno 1 ora prima del test</li>
+              <li>Evitare di mangiare 3 ore prima del test</li>
+              <li>Evitare i diuretici per 7 giorni prima del test (se vi è possibilità e se i farmaci NON sono necessari per il mantenimento dello stato di salute)</li>
+              <li>Svuotare la vescica ~30 minuti prima del test</li>
+              <li>Limitare alcol nelle 48 ore precedenti</li>
+              <li>Presentarsi in buone condizioni di idratazione</li>
+            </ul>
+          </div>
+
+          <button class="collapsible" aria-expanded="false">Come posso pagare la visita?</button>
+          <div class="content" hidden>
+            <p>È possibile pagare tramite i seguenti metodi: carta di credito, bonifico, contanti, satispay, paypal.</p>
+          </div>
+
+          <button class="collapsible" aria-expanded="false">Come posso raggiungere lo studio tramite i mezzi pubblici?</button>
+          <div class="content" hidden>
+            <p>Lo studio di via Interiano 3/9b è raggiungibile scendendo alla fermata del bus 0455 / Fontane Marose, mentre lo studio di via Zara 19/4 è raggiungibile scendendo alla fermata Rosselli 2/ Zara o Gobetti 2/ Zara.</p>
+          </div>
+
         </div>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <script>
-        // Toggle fullscreen menu display
-        function toggleMenu() {
-            const menu = document.getElementById('fullscreenMenu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  <footer>
+    <div class="footer-content">
+      <ul class="footer-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Chi sono</a></li>
+        <li><a href="percorso-nutrizionale.html">Il percorso nutrizionale</a></li>
+        <li><a href="info.html">Servizi offerti</a></li>
+        <li><a href="FAQ.html" aria-current="page">FAQ</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+      <p class="footer-small">
+        Biologo nutrizionista Davide Atzori © Tutti i diritti riservati |
+        Igea Equipe Salute, Via Interiano 3/9b, Genova, Italia |
+        Via Zara 19/4, Genova, Italia | Part.IVA: ######
+      </p>
+      <ul class="footer-menu footer-menu-inline">
+        <li><a href="terminiecondizioni.html">Termini &amp; Condizioni</a></li>
+        <li><a href="crediti.html">Crediti</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Fullscreen menu mobile -->
+  <div class="fullscreen-menu" id="fullscreenMenu" hidden>
+    <button class="close-btn" onclick="toggleMenu(this)" aria-label="Chiudi menu">✕</button>
+    <a href="index.html" onclick="toggleMenu(this)">Home</a>
+    <a href="about.html" onclick="toggleMenu(this)">Chi sono</a>
+    <a href="percorso-nutrizionale.html" onclick="toggleMenu(this)">Il percorso nutrizionale</a>
+    <a href="info.html" onclick="toggleMenu(this)">Servizi offerti</a>
+    <a href="FAQ.html" onclick="toggleMenu(this)" aria-current="page">FAQ</a>
+    <a href="contatti.html" onclick="toggleMenu(this)">Contatti</a>
+  </div>
+
+  <script>
+    // Toggle fullscreen menu (accessibile)
+    function toggleMenu(btn){
+      const menu = document.getElementById('fullscreenMenu');
+      const isOpen = !menu.hasAttribute('hidden');
+      if(isOpen){
+        menu.setAttribute('hidden', '');
+        if(btn && btn.tagName === 'BUTTON' && btn.hasAttribute('aria-expanded')){
+          btn.setAttribute('aria-expanded', 'false');
         }
-    </script>
-        <script>
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
-            
-            for (i = 0; i < coll.length; i++) {
-              coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight){
-                  content.style.maxHeight = null;
-                } else {
-                  content.style.maxHeight = content.scrollHeight + "px";
-                } 
-              });
-            }
-        </script>
+      }else{
+        menu.removeAttribute('hidden');
+        if(btn && btn.tagName === 'BUTTON' && btn.hasAttribute('aria-expanded')){
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      }
+    }
+
+    // Collapsible FAQ
+    (function(){
+      const triggers = document.querySelectorAll('.collapsible');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const content = btn.nextElementSibling;
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          if(expanded){
+            content.setAttribute('hidden', '');
+            content.style.maxHeight = null;
+          }else{
+            content.removeAttribute('hidden');
+            // transizione dolce se vuoi: calcola l'altezza
+            content.style.maxHeight = content.scrollHeight + 'px';
+          }
+        });
+      });
+    })();
+  </script>
+
+    
 </body>
 </html>
