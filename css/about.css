@@ -1,3 +1,17 @@
+/* =========================
+   Variabili / Base Reset
+========================= */
+:root{
+    --c-text:#333;
+    --c-white:#fff;
+    --c-offwhite:rgb(254,255,251);
+    --c-brand:#e7cb93;
+    --c-brand-strong:#f0896a;
+    --c-header-grad:linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), rgba(255,189,89,.6);
+    --c-fullscreen-grad:linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), rgba(255,189,89,.9);
+    --tr-fast:.3s ease;
+  }
+  
 /* Reset some default margins and styles */
 body, html {
     font-family: Arial, sans-serif;
@@ -8,7 +22,6 @@ body, html {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-
 /* Background for the entire page with a shadow overlay */
 body {
     will-change: transform;
@@ -17,162 +30,148 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
                 url('../img/home.png') no-repeat center center;
     background-size: cover;
+    overflow-x: hidden; 
 }
 
 
-/* Header section with percentage-based dimensions */
-header {
-    position: relative;
-    width: 100%;
-    height: 10vh; /* Adjusted height for better spacing */
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 189, 89, 0.6); /* Less transparent */
-    display: flex;
-    align-items: center;
-}
+/* =========================
+   Header / Navigazione
+========================= */
+header{
+    position:relative;
+    width:100%;
+    height:10vh;
+    min-height:64px;
+    display:flex;
+    align-items:center;
+    background:var(--c-header-grad);
+  }
+  
+  .header-content{
+    width:90%;
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1% 0;
+  }
+  
+  /* Logo + testi */
+  .header-icon{
+    width:clamp(10px, 10vw, 60px);
+    max-width:60px;
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+  }
+  
+  .header-text{
+    position:absolute;
+    top:50%;
+    left:calc(5px + 70px);
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  
+  header h1{
+    margin:0;
+    font-size:clamp(.5rem, 2vw, 1.3rem);
+    color:var(--c-offwhite);
+  }
+  header .subtitle{
+    margin:5px 0 0 0;
+    font-size:clamp(.4rem, 1.2vw, .9rem);
+    font-style:italic;
+    color:var(--c-offwhite);
+  }
+  
+  /* Adattamenti landscape con poca altezza */
+  @media (max-height:500px) and (orientation:landscape){
+    .header-icon{ width:25px; }
+    .header-text{ left:calc(10px + 40px); }
+  }
+  
+  /* Nav principale */
+  .nav-bar{
+    display:flex;
+    align-items:center;
+    margin-left:auto;
+  }
+  
+  .nav-bar .menu{
+    display:flex;
+    gap:.75rem;
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  
+  .nav-bar .menu li + li{ position:relative; }
+  .nav-bar .menu li + li::before{
+    content:"|";
+    opacity:.5;
+    margin-right:.75rem;
+    color:var(--c-offwhite);
+  }
+  
+  .nav-bar a{
+    color:var(--c-offwhite);
+    text-decoration:none;
+    font-size:1.1em;
+    transition:color var(--tr-fast), text-decoration var(--tr-fast);
+  }
+  .nav-bar a:hover{ color:#333; }
+  
+  /* Hamburger */
+  .hamburger{
+    font-size:1.5em;
+    cursor:pointer;
+    display:none;
+    color:var(--c-offwhite);
+    background:none;
+    border:0;
+  }
+  
+  /* Menu fullscreen (mobile) */
+  .fullscreen-menu{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    position:fixed;
+    inset:0;
+    background:var(--c-fullscreen-grad);
+    z-index:9999;
+  }
+  .fullscreen-menu[hidden]{ display:none; }
+  
+  .fullscreen-menu a{
+    color:var(--c-offwhite);
+    font-size:1.5em;
+    text-decoration:none;
+  }
+  
+  .close-btn{
+    position:absolute;
+    top:20px;
+    right:20px;
+    font-size:2em;
+    color:var(--c-offwhite);
+    background:none;
+    border:none;
+    cursor:pointer;
+  }
+  
+  /* Nav responsive */
+  @media (max-width:965px){
+    .nav-bar .menu{ display:none; }
+    .hamburger{ display:inline-flex; align-items:center; justify-content:center; }
+  }
 
-/* Styling the header content */
-.header-content {
-    width: 80%; /* Responsive width to fit different screens */
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1% 0; /* Reduced padding for more compact layout */
-}
-
-/* Icon styling with responsive dimensions and left padding */
-.header-icon {
-    width: clamp(10px, 10vw, 60px); /* Icon scales between 10px and 50px */
-    max-width: 60px; /* Limit maximum width on large screens */
-    position: absolute; /* Position the icon absolutely within its container */
-    left: 15px; /* Add padding from the left edge */
-    top: 50%; /* Center vertically within the header */
-    transform: translateY(-50%); /* Adjust to center vertically based on its height */
-    padding-right: 0.5%;
-}
-
-/* Specific styling for landscape orientation on small screens */
-@media only screen and (max-height: 500px) and (orientation: landscape) {
-    .header-icon {
-        width: 25px; /* Set a fixed width for landscape orientation */
-    }
-}
-
-/* Header text wrapper for h1 and subtitle */
-.header-text {
-    position: absolute;
-    top: 50%; /* Center vertically */
-    left: calc(5px + 70px); /* Offset to the right of the icon, adjusting as needed */
-    transform: translateY(-50%); /* Adjust to center vertically */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align text to the left within the container */
-}
-
-/* Scalable title */
-header h1 {
-    margin: 0;
-    font-size: clamp(0.5rem, 2vw, 1.3rem); /* Scales between 0.8rem and 2rem */
-    color: rgb(254, 255, 251);
-}
-
-/* Subtitle styling with scalable font */
-header .subtitle {
-    margin: 5px 0 0 0;
-    font-size: clamp(0.4rem, 1.2vw, 0.9rem); /* Scales between 0.4rem and 1.2rem */
-    font-style: italic;
-    color: white;
-}
-
-/* Landscape orientation adjustments for small screens */
-@media only screen and (max-height: 500px) and (orientation: landscape) {
-    .header-text {
-        left: calc(10px + 40px); /* Reduce the space in landscape orientation */
-    }
-}
-/* Navigation bar styling */
-.nav-bar {
-    display: flex;
-    align-items: center;
-}
-
-.nav-bar ul {
-    display: flex;
-    gap: 10px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.nav-bar li {
-    color: white;
-}
-
-.nav-bar a {
-    color: rgb(254, 255, 251);
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.nav-bar a:hover {
-    color: #333; /* Change to a gold color on hover */
-}
-
-/* Hamburger menu styling */
-.hamburger {
-    font-size: 1.5em;
-    cursor: pointer;
-    display: none;
-    color: rgb(254, 255, 251);
-}
-
-/* Fullscreen menu styling for mobile */
-.fullscreen-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 189, 89, 0.9); /* Less transparent */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    z-index: 1;
-}
-
-.fullscreen-menu a {
-    color: rgb(254, 255, 251);
-    font-size: 1.5em;
-    text-decoration: none;
-}
-
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2em;
-    color: rgb(254, 255, 251);
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* Responsive styling */
-@media (max-width: 801px) {
-    .nav-bar ul {
-        display: none; /* Hide the menu links on small screens */
-    }
-
-    .hamburger {
-        display: block; /* Show hamburger menu icon on small screens */
-    }
-}
 /* Team section styling */
 #team-section {
     padding: 5vh 3vw; /* Responsive padding */
@@ -261,7 +260,7 @@ header .subtitle {
     flex: 1;
     min-width: 280px;
     color: #333;
-    font-size: 1em;
+    font-size: clamp(0.9rem, 1.1vw, 1.1em);
     line-height: 1.6;
     padding: 0 20px;
     text-align: left;
@@ -296,8 +295,8 @@ header .subtitle {
 /* Colonne sinistra e destra */
 .left-column,
 .right-column {
-  flex: 1;
-  min-width: 300px;
+  flex: 1 1 0; 
+  min-width: 0;         /* IMPORTANTISSIMO: evita tagli di contenuto */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -372,105 +371,232 @@ header .subtitle {
   }
   
   
-
-/* Footer section */
-footer {
-    color: rgb(254, 255, 251);
-    text-align: center;
-    padding: clamp(8px, 3vw, 15px); /* Responsive padding for inner spacing */
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 189, 89, 0.6); /* Less transparent */
-    margin: 0 auto; /* Center footer with automatic margins */
-    font-size: clamp(0.9em, 2vw, 1.2em); /* Responsive font size for different screens */
-    box-sizing: border-box; /* Ensure padding doesn't push content outside width */
+/* =========================
+   Footer
+========================= */
+footer{
+  color:var(--c-offwhite);
+  text-align:center;
+  padding:clamp(8px, 3vw, 15px);
+  width:100%;
+  background:var(--c-header-grad);
+  margin:0 auto;
+  font-size:clamp(.9em, 2vw, 1.2em);
+  box-sizing:border-box;
+}
+@media (max-width:768px){
+  footer{
+    padding:clamp(7px, 4vw, 9px);
+    font-size:clamp(.8em, 3vw, 1em);
+  }
 }
 
-/* Additional styling for small screens */
+.footer-content{ text-align:center; padding:20px; }
+
+.footer-menu{
+  list-style:none;
+  padding:0;
+  margin:5px 0 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.footer-menu li{ display:inline; font-size:1em; }
+.footer-menu-inline li{
+  font-size:clamp(.6em, 3vw, .8em);
+}
+.footer-menu a{
+  text-decoration:none;
+  color:var(--c-offwhite);
+}
+.footer-menu a:hover{ text-decoration:underline; }
+
+/* separatori solo visivi nel menu footer principale (non usare <li>|</li>) */
+.footer-menu li + li::before{
+  content:"|";
+  color:#aaa;
+  opacity:.7;
+  margin-right:8px;
+}
+
+/* Nota legale */
+.footer-small{
+  padding-top:1%;
+  font-size:clamp(.6em, 3vw, .8em);
+}
+
+/* Footer responsive */
+@media (max-width:768px){
+  .footer-content{ padding:15px; }
+  .footer-menu{ gap:5px; }
+}
+@media (max-width:480px){
+  .footer-menu{
+    flex-direction:column;
+    gap:5px;
+  }
+  /* Mantieni inline solo il secondo menu */
+  .footer-menu-inline{
+    flex-direction:row !important;
+    flex-wrap:nowrap;
+    gap:8px;
+  }
+  /* rimuovi separatori visivi quando a colonna */
+  .footer-menu li + li::before{ content:none; }
+}
+
+/* =========================
+   Utility
+========================= */
+.sr-only{
+  position:absolute;
+  width:1px; height:1px;
+  padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0);
+  white-space:nowrap; border:0;
+}
+
+/* Riduci motion se preferito dall’utente */
+@media (prefers-reduced-motion:reduce){
+  *{ animation:none !important; transition:none !important; }
+}
+
+
+
+
+
+
+
+
+
+
+/* 4) Migliora il layout a colonna su schermi piccoli */
 @media (max-width: 768px) {
-    footer {
-        padding: clamp(7px, 4vw, 9px); /* Adjust padding for smaller screens */
-        font-size: clamp(0.8em, 3vw, 1em); /* Slightly smaller font size on small screens */
-        margin: 0 auto; /* Ensure footer stays centered */
-    }
-}
-/* Footer styles */
-.footer-content {
-    text-align: center;
-    padding: 20px;
+  .intro-section {
+    padding: 24px;                 /* un filo meno padding */
+  }
+
+  .text-columns {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 12px;               /* evita che il padding + width creino overflow */
+  }
+
+  .intro-text {
+    padding: 8px 0;
+    text-align: left;              /* o 'center' se preferisci */
+  }
+
+  .intro-video video {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
-/* Footer menu styling */
-.footer-menu {
-    list-style: none;
-    padding: 0;
+/* 5) Galleria: padding più morbido su mobile e protezione overflow */
+.gallery {
+  width: 100%;
+  box-sizing: border-box;
+}
+@media (max-width: 1024px) {
+    .gallery { grid-template-columns: repeat(4, 1fr); }
+  }
+  @media (max-width: 770px) {
+    .gallery { grid-template-columns: repeat(2, 1fr); }
+  }
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 20px;                 /* riduce il rischio di “taglio” laterale */
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+    .text-columns {
+      flex-direction: column; 
+      gap: 0px;              /* ridotto: spazio verticale tra colonna sinistra e destra */
+      padding: 0%;
+      align-items: center;    /* centra immagine, testi e video */
+    }
+  
+    .intro-text {
+      text-align: center;     /* testo centrato in mobile */
+      padding: 0;             /* rimuove padding laterale */
+      max-width: 600px;       /* opzionale: limita larghezza testo */
+    }
+  
+    .intro-image img,
+    .intro-video video {
+      width: 100%;
+      max-width: 500px;       /* non esagerano in larghezza */
+      margin: 0 auto;
+    }
+  }
+  
+  .intro-section {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 5px; /* Reduced space between links and title */
-    flex-wrap: wrap;
+    background: rgb(254,255,251);
+    padding: 40px 24px;
+  }
+  
+  .intro-flow {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    gap: 24px;                 /* spazio verticale/orizzontale base */
+  }
+  
+  /* tipografia e centratura su mobile */
+  .intro-text { 
+    color: #333; 
+    line-height: 1.6; 
+  }
+  .intro-text p { 
+    margin: 1em 1em 1em 1em; 
 }
-
-.footer-menu li {
-    display: inline;
-    font-size: 1 em;
-}
-.footer-menu-inline li{
-    font-size: clamp(0.6em, 3vw, 0.8em); /* Slightly smaller font size on small screens */
-}
-
-
-.footer-menu a {
-    text-decoration: none;
-    color: rgb(254, 255, 251);
-}
-
-.footer-menu a:hover {
-    text-decoration: underline;
-}
-
-/* Separator style */
-.footer-menu li:nth-child(odd) {
-    color: #aaa;
-    font-weight: normal;
-}
-.footer-small {
-    padding-top: 1%;
-    font-size: clamp(0.6em, 3vw, 0.8em); /* Slightly smaller font size on small screens */
-}
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .footer-content {
-        padding: 15px;
+  
+  .intro-image, .intro-video { display: grid; place-items: center; }
+  .intro-image img, .intro-video video {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+  }
+  
+  /* Layout a due colonne SOLO su schermi grandi */
+  @media (min-width: 992px) {
+    .intro-flow {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "img   text1"
+        "text2 video";
+      gap: 40px;               /* più respiro su desktop */
+      align-items: start;
     }
-    .footer-title {
-        font-size: 1em;
-        margin-bottom: 5px; /* Ensure small space on smaller screens */
-    }
-    .footer-menu {
-        gap: 5px;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer-menu {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    /* Mantieni inline solo il secondo menu */
-    .footer-menu-inline {
-        flex-direction: row !important;
-        flex-wrap: nowrap;
-        gap: 8px;
-    }
-
-    .footer-menu li:nth-child(even) {
-        display: none;
-    }
-
-    .footer-menu-inline li:nth-child(even) {
-        display: inline; /* Riattiva i separatori nel menu orizzontale */
-    }
-}
-
+  
+    .intro-image        { grid-area: img; }
+    .section-academics  { grid-area: text1; text-align: left; }
+    .section-approach   { grid-area: text2; text-align: left; }
+    .intro-video        { grid-area: video; }
+  
+    /* limiti eleganti per media */
+    .intro-image img    { max-width: 560px; }
+    .intro-video video  { max-width: 560px; }
+  }
+  
+  /* Micro-tuning su mobile: colonne impilate con spazio un po' minore */
+  @media (max-width: 768px) {
+    .intro-section { padding: 32px 16px; }
+    .intro-flow    { gap: 20px; }     /* spazio verticale più contenuto */
+  }
+  
+  
