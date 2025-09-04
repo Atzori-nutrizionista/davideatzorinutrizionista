@@ -23,15 +23,14 @@ body, html {
 }
 
 
-/* Background for the entire page with a shadow overlay */
+
+
 body {
-    will-change: transform;
-    backface-visibility: hidden;
-    transform: translate3d(0, 0, 0); /* trigger GPU rendering */
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
-                url('../img/home.png') no-repeat center center;
-    background-size: cover;
+  /* niente transform sul body! */
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+              url('../img/home.png') no-repeat center center / cover;
 }
+
 
 /* =========================
    Header / Navigazione
@@ -785,3 +784,4 @@ footer{
   @media (prefers-reduced-motion:reduce){
     *{ animation:none !important; transition:none !important; }
   }
+

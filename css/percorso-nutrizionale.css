@@ -28,13 +28,12 @@
   /* =========================
      Sfondo pagina
   ========================= */
-  body{
-    will-change:transform;
-    backface-visibility:hidden;
-    transform:translate3d(0,0,0);
-    background:
-      linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)),
-      url('../img/home.png') no-repeat center / cover;
+
+
+  body {
+    /* niente transform sul body! */
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+                url('../img/home.png') no-repeat center center / cover;
   }
   
   /* =========================
