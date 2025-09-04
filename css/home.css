@@ -12,24 +12,39 @@
     --tr-fast:.3s ease;
   }
 
-/* Reset some default margins and styles */
-body, html {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    min-height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-
-
-
+/* 1) Togli il background dal body */
 body {
-  /* niente transform sul body! */
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-              url('../img/home.png') no-repeat center center / cover;
+  background: none;
 }
+
+/* 2) Layer fisso sotto al contenuto */
+body::before {
+  content: "";
+  position: fixed;   /* resta fermo mentre scrolli */
+  inset: 0;
+  z-index: -1;       /* sotto a tutto */
+  pointer-events: none;
+
+  /* qui il tuo background */
+  background:
+    linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)),
+    url('../img/home.png') center / cover no-repeat;
+}
+
+/* 3) Mantieni lo scroll normale */
+html, body {
+  min-height: 100%;
+  height: auto;
+  overflow-y: auto;
+  overflow-x: hidden; /* per sicurezza */
+  margin: 0px;
+  padding: 0px;
+  font-family:Arial, sans-serif;
+
+}
+
+/* (facoltativo) evita “salti” quando compare la scrollbar */
+html { scrollbar-gutter: stable; }
 
 
 /* =========================
@@ -785,3 +800,4 @@ footer{
     *{ animation:none !important; transition:none !important; }
   }
 
+  
